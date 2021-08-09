@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 //configuring the database
-const dbConfig=require('./config/database.config');
+const dbConfig=require('./config/database.config.js');
 const mongoose=require('mongoose');
 
 mongoose.Promise=global.Promise;
@@ -30,7 +30,8 @@ mongoose.connect(dbConfig.url,{
 app.get('/',(req,res) => {
     res.json({"message":"Welcome to FundooNotes"});
 });
- require('.app/routes/note.routes.js') (app);
+ require('./app/routes/routes')(app);
+ 
 app.listen(3000,() => {
   console.log("server is listening on port 3000");
 });
