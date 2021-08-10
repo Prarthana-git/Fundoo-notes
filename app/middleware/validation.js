@@ -1,11 +1,14 @@
 const { required } = require('joi')
 const Joi = require('joi')
-
+/**
+ * @description   : validating all parameters we are getting from the user for registration
+ * @method        : string, min, required, pattern of JOI
+*/
 const authRegister = Joi.object({
     firstName: Joi.string()
         .min(3)
         .required()
-        .Pattern(new RegExp('^[A-Z]{1}[a-z]{2,}')),
+        .pattern(new RegExp('^[A-Z]{1}[a-z]{2,}')),
 
     lastName: Joi.string()
         .min(3)
@@ -32,3 +35,4 @@ const authLogin=Joi.object({
     .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
     .required()
 })
+module.exports={authRegister,authLogin}

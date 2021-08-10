@@ -1,5 +1,5 @@
 const userService = require('../service/user')
-
+const { authRegister, authLogin } = require('../middleware/validation')
 class Controller {
     register = (req, res) => {
         try {
@@ -7,22 +7,31 @@ class Controller {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
-                phoneNumber: req.body.phoneNumber,
                 password: req.body.password
             };
-            userService.registerUser(user, (error, data) => {
-                if (error) {
-                    return res.status(409).json({
-                        success: false,
-                        message: 'User already exist',
-                    });
-                } else {
-                    return res.status(201).json({
-                        success: true, message: "User Registered",
-                        data: data,
-                    });
-                }
-            });
+            const registerValidation = authRegister.validate(user);
+
+            if (registerValidation.error) {
+                res.status(400).send({
+                    success: false,
+                    message: 'Please Enter Valid Fields',
+                    data: registerValidation,
+                });
+                return;
+            } 
+                userService.registerUser(user, (error, data) => {
+                    if (error) {
+                        return res.status(409).json({
+                            success: false,
+                            message: 'User already exist',
+                        });
+                    } else {
+                        return res.status(201).json({
+                            success: true, message: "User Registered",
+                            data: data,
+                        });
+                    }
+                });
         } catch (error) {
             return res.status(500).json({
                 success: false, message: "Error While Registering",
@@ -36,7 +45,15 @@ class Controller {
                 email: req.body.email,
                 password: req.body.password
             }
-
+            const loginValidation = authLogin.validate(loginInfo);
+            if(loginValidation.error)  {
+                res.status(403).send({
+                    success:false,
+                    message:'please check email and password and try again',
+                    data:loginValidation,
+                }); 
+                return;
+            }
             userService.loginUser(loginInfo, (error, data) => {
                 if (error) {
                     return res.status(403).json({
