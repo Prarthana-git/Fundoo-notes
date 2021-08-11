@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+
+//create instance of schema
 const userSchema = mongoose.Schema({
     firstName: {
         type: String,
@@ -21,32 +23,52 @@ const userSchema = mongoose.Schema({
     }
 },
     {
-        timesstamps: true
+        timestamps: true
     })
+
+    userSchema.pre('save', async function (next) {
+        try {
+          const salt = await bcrypt.genSalt(10);
+          const hashedPassword = await bcrypt.hash(this.password, salt);
+          this.password = hashedPassword;
+          next();
+        } catch (error) {
+          next(error);
+        }
+      });
 
 const user = mongoose.model('user', userSchema);
 
-class userModel {
-    registerUser = (userdetails, callback) => {
-        const newUser = new user({
-            firstName: userdetails.firstName,
-            lastName: userdetails.lastName,
-            email: userdetails.email,
-            password: userdetails.password,
-        });
 
-        newUser.save((error, data) => {
-            return (error) ? callback(error, null) : callback(null, data)
+
+class userModel {
+
+    registerUser = async(userDetails,callback) => {
+        const newUser = new user({
+            firstName:userDetails.firstName,
+            lastName: userDetails.lastName,
+            email: userDetails.email,
+            password:userDetails.password,
         });
+       const data= await user.findOne({ email: userDetails.email });
+        if (data) {
+           callback('User already exist',data)
+            }
+         else {
+                 const result= await newUser.save();
+               callback(null,result);
+        }
     }
+    
+
     loginUser = (loginData, callBack) => {
-        user.findOne({ 'email': loginData.email }, (error, data) => {
+        user.findOne({ email: loginData.email }, (error, data) => {
             if (error) {
                 return callBack(error, null);
             } else if (!data) {
                 return callBack("Invalid Credentials", null);
-            }else
-            return callBack(null, data);
+            } else
+                return callBack(null, data);
         });
     }
 }

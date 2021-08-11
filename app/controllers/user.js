@@ -49,7 +49,7 @@ class Controller {
             if(loginValidation.error)  {
                 res.status(403).send({
                     success:false,
-                    message:'please check email and password and try again',
+                    message:"please check email and password and try again",
                     data:loginValidation,
                 }); 
                 return;
