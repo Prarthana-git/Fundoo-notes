@@ -1,3 +1,4 @@
+
 module.exports=(app) =>{
     const controller = require('../controllers/user');
     //api for register user

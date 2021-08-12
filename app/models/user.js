@@ -1,3 +1,10 @@
+/**
+ * @description   : It is use to create schema in data base and doing schema vlidation and
+ *                  encrypting password.
+ * @package       : mongoose, bcrypt
+ * @file          : user.js
+ * @author        : Prarthana Chaudhari
+*/
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
@@ -39,8 +46,6 @@ const userSchema = mongoose.Schema({
 
 const user = mongoose.model('user', userSchema);
 
-
-
 class userModel {
 
     registerUser = async(userDetails,callback) => {
@@ -59,7 +64,10 @@ class userModel {
                callback(null,result);
         }
     }
-    
+    /**
+   * @description     : It uses to login the registered user
+   * @param           : loginData, callback
+  */
 
     loginUser = (loginData, callBack) => {
         user.findOne({ email: loginData.email }, (error, data) => {

@@ -47,9 +47,9 @@ class Controller {
             }
             const loginValidation = authLogin.validate(loginInfo);
             if(loginValidation.error)  {
-                res.status(403).send({
+                res.status(400).send({
                     success:false,
-                    message:"please check email and password and try again",
+                    message:"please check inserted fields",
                     data:loginValidation,
                 }); 
                 return;
@@ -61,18 +61,20 @@ class Controller {
                         message: "please check email and password and try again",
                         error,
                     });
-                } else {
+                } 
+                // else {
                     return res.status(200).json({
                         success: true,
                         message: "User successfully logined In",
                         data,
                     });
-                }
+                // }
             });
         } catch (error) {
             return res.status(500).send({
                 success: false,
                 message: 'Internal server error',
+                data,
             });
         }
     }

@@ -33,6 +33,6 @@ const authLogin=Joi.object({
   password: Joi.string()
     .required()
     .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
-    .required()
+    
 })
 module.exports={authRegister,authLogin}
