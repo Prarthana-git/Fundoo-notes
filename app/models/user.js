@@ -13,15 +13,18 @@ const userSchema = mongoose.Schema({
     firstName: {
         type: String,
         required: true,
+        validate: /^[a-zA-Z ]{3,30}$/
     },
     lastName: {
         type: String,
         required: true,
+        validate: /^[a-zA-Z ]{3,30}$/
     },
     email: {
         type: String,
         required: true,
         unique: true,   
+        validate: /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9]+[.]+[a-zA-Z]+$/
     },
     password: {
         type: String,
