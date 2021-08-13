@@ -12,16 +12,16 @@ const bcrypt = require('bcrypt');
 const userSchema = mongoose.Schema({
     firstName: {
         type: String,
-        required: true
+        required: true,
     },
     lastName: {
         type: String,
-        required: true
+        required: true,
     },
     email: {
         type: String,
         required: true,
-        unique: true,
+        unique: true,   
     },
     password: {
         type: String,
@@ -34,9 +34,12 @@ const userSchema = mongoose.Schema({
     })
 
     userSchema.pre('save', async function (next) {
-        try {
+        try {                  
+         // generate a salt
           const salt = await bcrypt.genSalt(10);
+         // hash the password along with our new salt
           const hashedPassword = await bcrypt.hash(this.password, salt);
+        // override the cleartext password with the hashed one
           this.password = hashedPassword;
           next();
         } catch (error) {
