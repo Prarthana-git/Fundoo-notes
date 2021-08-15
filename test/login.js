@@ -8,7 +8,7 @@ chai.should()
 chai.use(chaihttp)
 
 describe('login', () => {
-  it('givenloginDataItShould_makePOSTrequestforloginuser', (done) => {
+  it('givenValidDataItShould_makePOSTRequestToLoginUser_andReturnTokenAndStatusCodeAs200', (done) => {
     const loginData = userDetails.user.login
     chai.request(server)
       .post('/login')
@@ -21,13 +21,12 @@ describe('login', () => {
         res.body.should.be.a('object')
         res.body.should.have.property('success').eql(true)
         res.body.should.have.property('message').eql('User successfully logined In')
-        res.body.should.have.property('data').should.be.a('object')
-        res.body.should.have.property("token"),
+        res.body.should.have.property('token')
         done();
       })
   })
 
-  it('givenInvalidEmailItShould_failtomakePOSTrequestforloginuser', (done) => {
+  it('givenInvalidEmailItShould_failToMakePOSTRequestToLoginUser_andReturnsStatusCodeAs400', (done) => {
     const loginData = userDetails.user.loginwithwrongEmail
     chai.request(server)
       .post('/login')
@@ -43,7 +42,7 @@ describe('login', () => {
         done()
       })
   })
-  it('givenemptyemailIdItShould_failtomakePOSTrequestforloginuser', (done) => {
+  it('givenEmptyStringInemailItShould_failToMakePOSTRequestToLoginUser_andReturnsStatusCodeAs400', (done) => {
     const loginData = userDetails.user.loginwithnoEmail
     chai.request(server)
       .post('/login')
@@ -60,7 +59,7 @@ describe('login', () => {
         done()
       })
   })
-  it('givenemptypassworddItShould_failtomakePOSTrequestforloginuser', (done) => {
+  it('givenEmptyStringInPasswordItShould_failToMakePOSTRequestToLoginUser_andReturnsStatusCodeAs400', (done) => {
     const loginData = userDetails.user.loginwithnoPassword
     chai.request(server)
       .post('/login')
@@ -77,7 +76,7 @@ describe('login', () => {
         done()
       })
   })
-  it('givenwrongpassworddItShould_failtomakePOSTrequestforloginuser', (done) => {
+  it('givenIncorrectPasswordItShould_failToMakePOSTRequestToLoginUser_andReturnsStatusCodeAs401', (done) => {
     const loginData = userDetails.user.loginwrongPassword
     chai.request(server)
       .post('/login')

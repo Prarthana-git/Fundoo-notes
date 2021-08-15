@@ -1,4 +1,5 @@
 const userService = require('../service/user')
+const auth=require('../middleware/authenticate')
 const { authRegister, authLogin } = require('../middleware/validation')
 class Controller {
   register = (req, res) => {
@@ -68,7 +69,8 @@ class Controller {
         // else {
         return res.status(200).json({
           success: true,
-          message: 'User successfully logined In'
+          message: 'User successfully logined In',
+          token:auth.generateToken(data)
         })
         // }
       })

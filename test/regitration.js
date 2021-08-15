@@ -29,7 +29,7 @@ describe('register', () => {
       })
   })
 
-  it('givenRegistrationData_whennofirstNamegiven_shouldNoteSaveitinDatabase', (done) => {
+  it('givenEmptyFirstName_andOtherValidData_failsToMakePOSTRequestToRegisterUser_andReturnsStatusCodeAs400', (done) => {
     const userData = userDetails.user.registerwithnofirstName
     chai.request(server)
       .post('/register')
@@ -45,7 +45,7 @@ describe('register', () => {
         done()
       })
   })
-  it('givenRegistrationData_whennolastNamegiven_shouldNoteSaveitinDatabase', (done) => {
+  it('givenEmptyLastName_andOtherValidData_failsToMakePOSTRequestToRegisterUser_andReturnsStatusCodeAs400', (done) => {
     const userData = userDetails.user.registerwithnofirstName
     chai.request(server)
       .post('/register')
@@ -61,7 +61,7 @@ describe('register', () => {
         done()
       })
   })
-  it('givenRegistrationData_whennoemailIDgiven_shouldNoteSaveitinDatabase', (done) => {
+  it('givenEmptyEmail_andOtherValidData_failsToMakePOSTRequestToRegisterUser_andReturnsStatusCodeAs400', (done) => {
     const userData = userDetails.user.registerwithnoemailId
     chai.request(server)
       .post('/register')
@@ -77,7 +77,7 @@ describe('register', () => {
         done()
       })
   })
-  it('givenRegistrationData_whennopasswordgiven_shouldNoteSaveitinDatabase', (done) => {
+  it('givenEmptypassword_andOtherValidData_failsToMakePOSTRequestToRegisterUser_andReturnsStatusCodeAs400', (done) => {
     const userData = userDetails.user.registrationWithNoPassword
     chai.request(server)
       .post('/register')
