@@ -1,4 +1,5 @@
 const userModel = require('../models/user')
+const auth = require('../middleware/authenticate')
 const bcrypt=require('bcrypt')
 class userService {
     registerUser = (user, callback) => {
@@ -18,7 +19,8 @@ class userService {
                         callback(err, null);
                     }
                     if (data) {
-                        callback(null, data);
+                        const token=auth.generateToken(loginInfo)
+                        return callback(null, token);
                     }
                     else {
                         callback('Password does not match');

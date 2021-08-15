@@ -7,7 +7,6 @@
                 "password":"Prarthana@5554f"
             },
             "registerwithnofirstName":{
-                "firstName":"",
                 "lastName" :"Chaudhari",
                 "email"   :"chaudhari@gmail.com",
                 "password":"Priti@452g"
@@ -15,21 +14,18 @@
             }, 
             "registerwithnolastName":{
                 "firstName":"Priti",
-                "lastName" :"",
                 "email"   :"pritichaudhari@gmail.com",
                 "password":"Priti@452g"
             },
             "registerwithnoemailId":{
                 "firstName":"Pranit",
                 "lastName" :"Patil",
-                "email"   :"",
                 "password":"Pranit!hs5"
             },
             "registrationWithNoPassword": {
                 "firstName": "Rohit",
                 "lastName": "Bagul",
-                "email": "rohitbagul.12@gmail.com",
-                "password":""
+                "email": "rohitbagul.12@gmail.com"
             },
             "login": {
                 "email": "poojachaudhari@gmail.com",
@@ -40,16 +36,14 @@
                 "password": "pooja@44Gh"
             },
             "loginwithnoEmail": {
-                "email": "",
                 "password": "pooja@44Gh"
             },
             "loginwithnoPassword": {
-                "email": "poojachaudhari@gmail.com",
-                "password": ""
+                "email": "poojachaudhari@gmail.com"
             },
             "loginwrongPassword": {
                 "email": "poojachaudhari@gmail.com",
                 "password": "Pooja@44Gh"
             }
+        }
     }
-}
