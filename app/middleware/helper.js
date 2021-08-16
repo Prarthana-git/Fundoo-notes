@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 /**
  * @description Function to generate token if the credentials passes
@@ -6,5 +6,5 @@ const jwt = require('jsonwebtoken')
  */
 exports.generateToken = (data) => {
   return jwt.sign({ data }, process.env.TOKEN_GENERATE,
-    { expiresIn: '1h' })
-}
+    { expiresIn: '1h' });
+};

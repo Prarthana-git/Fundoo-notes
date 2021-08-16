@@ -10,7 +10,6 @@
                 "lastName" :"Chaudhari",
                 "email"   :"chaudhari@gmail.com",
                 "password":"Priti@452g"
-
             }, 
             "registerwithnolastName":{
                 "firstName":"Priti",

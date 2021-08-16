@@ -1,4 +1,6 @@
-const Joi = require('joi')
+/* eslint-disable prefer-regex-literals */
+
+const Joi = require('joi');
 /**
  * @description   : validating all parameters we are getting from the user for registration
  * @method        : string, min, required, pattern of JOI
@@ -21,7 +23,7 @@ const authRegister = Joi.object({
   password: Joi.string()
     .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
     .required()
-})
+});
 
 const authLogin = Joi.object({
   email: Joi.string()
@@ -32,5 +34,5 @@ const authLogin = Joi.object({
     .required()
     .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
 
-})
-module.exports = { authRegister, authLogin }
+});
+module.exports = { authRegister, authLogin };
