@@ -1,6 +1,6 @@
 const userService = require('../service/user');
 const auth = require('../middleware/helper');
-const { authRegister, authLogin } = require('../middleware/validation');
+const { authRegister, authLogin, authForgotPassword } = require('../middleware/validation');
 const logger = require('../../config/loggers');
 /**
  * @description    : This class has two methods to create and login of user
@@ -92,6 +92,47 @@ class Controller {
       });
     }
   }
+
+  forgotPassword (req, res) {
+    try {
+      const userData =
+    {
+      email: req.body.email
+    };
+      const passwordValidation = authForgotPassword.validate(userData);
+      if (passwordValidation.error) {
+        logger.error('Error while trying to login the user');
+        res.status(400).send({
+          success: false,
+          message: 'please check inserted fields',
+          data: passwordValidation
+        });
+        return;
+      };
+      userService.forgotPassword(userData, (error, result) => {
+        if (error) {
+          return res.status(404).json({
+            success: false,
+            message: 'Not Found',
+            error
+          });
+        } if (result) {
+          logger.info('email found and sent link successfully', result);
+          return res.status(200).send({
+            success: true,
+            message: 'User email id exist and reset link sent successfully',
+            data: result
+          });
+        }
+      });
+    } catch (error) {
+      return res.status(500).send({
+        success: false,
+        message: 'Internal server error'
+      });
+    }
+  }
 }
+
 // exporting the class
 module.exports = new Controller();

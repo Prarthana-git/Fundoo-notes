@@ -80,18 +80,36 @@ class UserModel {
    * @param           : loginData, callback
   */
 
-  loginUser (loginData, callBack) {
+  loginUser (loginData, callback) {
     User.findOne({ email: loginData.email }, (error, data) => {
       if (error) {
         logger.error('Error while finding user', error);
-        return callBack(error, null);
+        return callback(error, null);
       } else if (!data) {
         logger.info('Invalid Credentials', data);
-        return callBack('Invalid Credentials', null);
+        return callback(new Error('Invalid Credentials'), null);
       } else {
-        return callBack(null, data);
+        return callback(null, data);
       }
     });
+  }
+
+  forgotPassword (emailId, callback) {
+    try {
+      User.findOne({ email: emailId.email }, (error, data) => {
+        if (error) {
+          logger.error('Error while finding user', error);
+          return callback(error, null);
+        } else if (!data) {
+          logger.info('Invalid Credentials', data);
+          return callback(new Error('Invalid Credentials'), null);
+        } else {
+          return callback(null, data);
+        }
+      });
+    } catch (error) {
+      return callback(error, null);
+    }
   }
 }
 // exporting the class

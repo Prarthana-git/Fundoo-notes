@@ -6,4 +6,7 @@ module.exports = (app) => {
 
   // api for login user
   app.post('/login', controller.login);
+
+  // api for forgot-password
+  app.post('/forgot-passowrd', controller.forgotPassword);
 };

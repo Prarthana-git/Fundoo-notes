@@ -21,7 +21,7 @@ const authRegister = Joi.object({
     .required(),
 
   password: Joi.string()
-    .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
+    .pattern(new RegExp('^ [a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$'))
     .required()
 });
 
@@ -32,7 +32,13 @@ const authLogin = Joi.object({
 
   password: Joi.string()
     .required()
-    .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
+    .pattern(new RegExp('^[a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$'))
 
 });
-module.exports = { authRegister, authLogin };
+const authForgotPassword = Joi.object({
+  email: Joi.string()
+    .email()
+    .required()
+    .pattern(new RegExp('^[a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$'))
+});
+module.exports = { authRegister, authLogin, authForgotPassword };

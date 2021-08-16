@@ -43,6 +43,23 @@ class UserService {
       }
     });
   }
-}
 
+  forgotPassword (emailId, callback) {
+    try {
+      let newToken;
+      userModel.forgotPassword(emailId, (error, user) => {
+        if (error || !user) {
+          logger.error('User Does not exist');
+          return callback(error, null);
+        } else {
+          logger.info('User Found', user);
+          newToken = auth.forgotPasswordToken(user);
+          return callback(null, newToken);
+        };
+      });
+    } catch (error) {
+      return callback(error, null);
+    }
+  }
+}
 module.exports = new UserService();
