@@ -160,7 +160,6 @@ class Controller {
       return res.status(500).send({
         sucess: false,
         message: error.message
-
       });
     }
   }

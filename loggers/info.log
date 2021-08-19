@@ -407,3 +407,25 @@
 {"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T16:22:55.413Z"}
 {"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T16:29:45.051Z"}
 {"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T16:31:04.551Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T16:46:15.847Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:04:21.119Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:20:04.681Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:22:37.683Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:30:32.492Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:34:29.015Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:36:18.502Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-19T17:36:55.974Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"611e5ad6c52e440e0437ce0d","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"611e5ad6c52e440e0437ce0d","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$H7J5NOjAiyUHraUkl7FgX.xJwTvBiC92k8WVPvfIuQnmu10V53uvm","__v":0},"$init":true,"level":"info","message":"Password reset link send successfully","timestamp":"2021-08-19T17:36:55.978Z"}
+{"code":"ESOCKET","command":"CONN","level":"info","message":"info self signed certificate in certificate chain","stack":"Error: self signed certificate in certificate chain\n    at TLSSocket.onConnectSecure (_tls_wrap.js:1514:34)\n    at TLSSocket.emit (events.js:375:28)\n    at TLSSocket._finishInit (_tls_wrap.js:936:8)\n    at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:708:12)","timestamp":"2021-08-19T17:36:56.832Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:41:45.446Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:42:50.691Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-19T17:43:37.857Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"611e5ad6c52e440e0437ce0d","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"611e5ad6c52e440e0437ce0d","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$H7J5NOjAiyUHraUkl7FgX.xJwTvBiC92k8WVPvfIuQnmu10V53uvm","__v":0},"$init":true,"level":"info","message":"Password reset link send successfully","timestamp":"2021-08-19T17:43:37.860Z"}
+{"code":"ESOCKET","command":"CONN","level":"info","message":"info self signed certificate in certificate chain","stack":"Error: self signed certificate in certificate chain\n    at TLSSocket.onConnectSecure (_tls_wrap.js:1514:34)\n    at TLSSocket.emit (events.js:375:28)\n    at TLSSocket._finishInit (_tls_wrap.js:936:8)\n    at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:708:12)","timestamp":"2021-08-19T17:43:38.650Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:45:22.603Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:46:05.287Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:51:19.591Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:54:44.271Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-19T17:56:21.963Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-19T17:58:03.206Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-19T17:58:10.304Z"}

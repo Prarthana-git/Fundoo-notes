@@ -1,168 +1,207 @@
 {
-    "swagger": "2.0",
-    "info": {
-      "version": "1.0.0", 
+  "swagger": "2.0",
+  "info": {
+      "version": "1.0.0",
       "title": "Fundoo Notes",
       "description": "Fundoo Notes Application",
       "license": {
-        "name": "MIT",
-        "url": "https://opensource.org/licenses/MIT"
+          "name": "MIT",
+          "url": "https://opensource.org/licenses/MIT"
       }
-    },
-    "host": "localhost:3000",
-    "basePath": "/",
-    "tags": [     
-    ],
-    "schemes": ["http"],
-    "consumes": ["application/json"],
-    "produces": ["application/json"],
-        "paths": {
-          "/register": {
-            "post": {
-              "tags": ["Register"],
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+      "http"
+  ],
+  "consumes": [
+      "application/json"
+  ],
+  "produces": [
+      "application/json"
+  ],
+  "paths": {
+      "/register": {
+          "post": {
+              "tags": [
+                  "Register"
+              ],
               "description": "Register new user",
               "parameters": [
-                 {
-                  "name": "Register",
-                  "in":"body",
-                  "description":"User that we want to register",
-                  "schema": {
-                  "$ref": "#/definitions/User"
+                  {
+                      "name": "Register",
+                      "in": "body",
+                      "description": "User that we want to register",
+                      "schema": {
+                          "$ref": "#/definitions/User"
+                      }
                   }
-                }
-            ],
-            "produces":["application/json"],
-            "responses":{
-                "201": {
-                    "description": "New user is Registered"
+              ],
+              "produces": [
+                  "application/json"
+              ],
+              "responses": {
+                  "201": {
+                      "description": "New user is Registered"
                   },
                   "409": {
-                    "description": "User already exist"
+                      "description": "User already exist"
                   },
                   "500": {
-                    "description": "Internal server error"
-                  }
-                }
-            }
-        },
-            "/login":{
-                "post": {
-                  "tags": ["Login"],
-                  "description": "Login user",
-                  "parameters": [
-                     {
-                      "name": "Login",
-                      "in":"body",
-                      "description":"User that we want to login",
-                      "schema": {
-                        "$ref": "#/definitions/LoginUser"
-                      }
-                    }
-                ],
-                "produces":["application/json"],
-                "responses":{
-                    "200": {
-                        "description": "ok"
-                      },
-                      "404": {
-                        "description": "Not Found"
-                      }
-                    }
-                }    
-            }
-        },  
-        "/forgot-passowrd": {
-            "post": {
-                "tags": [
-                    "FundooNotes forgotPassword"
-                ],
-                "Summary": "user receives an email about link to reset password",
-                "parameters": [
-                    {
-                        "name": "email",
-                        "in": "body",
-                        "schema": 
-                        {
-                            "$ref": "#/definitions/forgotPassword"
-                        }
-                    }        
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful"
-                    },
-                    "400": {
-                        "description": "Bad Request"
-                    },
-                    "404": {
-                        "description": "Not Found"
-                    },
-                    "500": {
-                        "description": "Internal Error"
-                    }
-                }
-            }
-        },
-        "/reset-passowrd": {
-            "put": {
-                "tags": [
-                    "FundooNotes resetPassword"
-                ],
-                "Summarry": "reset password",
-                "parameters": [
-                    {
-                        "name": "resetPassword",
-                        "in": "body",
-                        "schema": {
-                            "$ref": "#/definitions/resetPassword"
-                        }
-                    },
-                    {
-                        "name": "token",
-                        "in": "header"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful"
-                    },
-                    "401": {
-                        "description": "Unauthorized User"
-                    },
-                    "500": {
-                        "description": "Internal Error"
-                    }
-                }
-            }
-        },
-        "definitions": {
-          "User": {
-            "type":"object",
-            "properties": {
-              "firstName": {
-                "type": "string"
-              },
-              "lastName": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-                  }
-              }
-          },
-          "LoginUser":{
-              "type":"object",
-              "properties": {
-                  "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                      }
+                      "description": "Internal server error"
                   }
               }
           }
+      },
+      "/login": {
+          "post": {
+              "tags": [
+                  "Login"
+              ],
+              "description": "Login user",
+              "parameters": [
+                  {
+                      "name": "Login",
+                      "in": "body",
+                      "description": "User that we want to login",
+                      "schema": {
+                          "$ref": "#/definitions/LoginUser"
+                      }
+                  }
+              ],
+              "produces": [
+                  "application/json"
+              ],
+              "responses": {
+                  "200": {
+                      "description": "ok"
+                  },
+                  "404": {
+                      "description": "Not Found"
+                  }
+              }
+          }
+      },
+      "/forgot-passowrd": {
+          "post": {
+              "tags": [
+                  "ForgotPassword"
+              ],
+              "Summary": "user receives email of resetlink to reset password",
+              "parameters": [
+                  {
+                      "name": "email",
+                      "in": "body",
+                      "schema": {
+                          "$ref": "#/definitions/forgotPassword"
+                      }
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Successful"
+                  },
+                  "400": {
+                      "description": "Bad Request"
+                  },
+                  "404": {
+                      "description": "Not Found"
+                  },
+                  "500": {
+                      "description": "Internal Error"
+                  }
+              }
+          }
+      },
+      "/reset-passowrd": {
+          "put": {
+              "tags": [
+                  " resetPassword"
+              ],
+              "Summarry": "reset password",
+              "parameters": [
+                  {
+                      "name": "resetPassword",
+                      "in": "body",
+                      "schema": {
+                          "$ref": "#/definitions/resetPassword"
+                      }
+                  },
+                  {
+                      "name": "token",
+                      "in": "header"
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Successful"
+                  },
+                  "401": {
+                      "description": "Unauthorized User"
+                  },
+                  "500": {
+                      "description": "Internal Error"
+                  }
+              },
+              "security":[{
+                "JWT" :[]
+              }]
+          }
+      },
+      "securityDefinitions": {
+          "JWT": {
+              "type": "apiKey",
+              "name": "token",
+              "in": "Headers"
+          }
       }
+    },
+      "definitions": {
+          "User": {
+              "type": "object",
+              "properties": {
+                  "firstName": {
+                      "type": "string"
+                  },
+                  "lastName": {
+                      "type": "string"
+                  },
+                  "email": {
+                      "type": "string"
+                  },
+                  "password": {
+                      "type": "string"
+                  }
+              }
+          },
+          "LoginUser": {
+              "type": "object",
+              "properties": {
+                  "email": {
+                      "type": "string"
+                  },
+                  "password": {
+                      "type": "string"
+                  }
+              }
+          },
+          "forgotPassword": {
+              "type": "object",
+              "properties": {
+                  "email": {
+                      "type": "string"
+                  }
+              }
+          },
+          "resetPassword": {
+              "type": "object",
+              "properties": {
+                  "password": {
+                      "type": "string"
+                  }
+              }
+
+          }
+      }
+  }
