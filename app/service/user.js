@@ -1,7 +1,11 @@
+/* eslint-disable no-unused-expressions */
+
+/* eslint-disable no-sequences */
 const userModel = require('../models/user');
-const auth = require('../middleware/helper');
+const help = require('../middleware/helper');
 const bcrypt = require('bcrypt');
 const logger = require('../../config/loggers');
+const sendEmail = require('../../Utility/nodemailer');
 class UserService {
   registerUser (user, callback) {
     userModel.registerUser(user, (err, data) => {
@@ -30,7 +34,7 @@ class UserService {
           }
           if (data) {
             logger.info('logged in successfully', data);
-            const token = auth.generateToken(loginInfo);
+            const token = help.generateToken(loginInfo);
             return callback(null, token);
           } else {
             logger.error('Please enter correct password', err);
@@ -44,18 +48,21 @@ class UserService {
     });
   }
 
-  forgotPassword (emailId, callback) {
+  forgotPassword (email, callback) {
     try {
+      let link;
       let newToken;
-      userModel.forgotPassword(emailId, (error, user) => {
-        if (error || !user) {
-          logger.error('User Does not exist');
-          return callback(error, null);
+      userModel.forgotPass(email, (error, data) => {
+        if (error) {
+          logger.error('Some error occured', error);
+          callback(error, null);
         } else {
-          logger.info('User Found', user);
-          newToken = auth.forgotPasswordToken(user);
-          return callback(null, newToken);
-        };
+          newToken = help.forgotPasswordToken(data);
+          link = `${process.env.CLlENTURL}${newToken}`,
+          sendEmail(data.email, 'Password Reset Link ', link),
+          callback(null, link);
+          logger.info('Password reset link send successfully', data);
+        }
       });
     } catch (error) {
       return callback(error, null);

@@ -1,6 +1,6 @@
 const userService = require('../service/user');
 const auth = require('../middleware/helper');
-const { authRegister, authLogin, authForgotPassword } = require('../middleware/validation');
+const { authRegister, authLogin, authForgot } = require('../middleware/validation');
 const logger = require('../../config/loggers');
 /**
  * @description    : This class has two methods to create and login of user
@@ -96,27 +96,27 @@ class Controller {
   forgotPassword (req, res) {
     try {
       const userData =
-    {
-      email: req.body.email
-    };
-      const passwordValidation = authForgotPassword.validate(userData);
-      if (passwordValidation.error) {
-        logger.error('Error while trying to login the user');
-        res.status(400).send({
+      {
+        email: req.body.email
+      };
+      const forgotValidation = authForgot.validate(userData);
+      if (forgotValidation.error) {
+        res.status(400).json({
           success: false,
-          message: 'please check inserted fields',
-          data: passwordValidation
+          message: 'Please enter valid field',
+          data: forgotValidation
         });
         return;
-      };
+      }
       userService.forgotPassword(userData, (error, result) => {
         if (error) {
-          return res.status(404).json({
+          logger.error('Error while trying to login the user', error);
+          return res.status(403).json({
             success: false,
-            message: 'Not Found',
+            message: 'please check email and try again',
             error
           });
-        } if (result) {
+        } else {
           logger.info('email found and sent link successfully', result);
           return res.status(200).send({
             success: true,
@@ -132,6 +132,38 @@ class Controller {
       });
     }
   }
+
+  // resetPassword (req, res) {
+  //   try {
+  //     const userCredential = {
+  //       token: req.headers.token,
+  //       password: req.body.password
+  //     };
+  //     userService.resetPassword(userCredential, (error, result) => {
+  //       if (error) {
+  //         logger.error('Error while resetting the password', error);
+  //         res.status(400).send({
+  //           success: false,
+  //           message: 'failed reset the password',
+  //           error
+  //         });
+  //       } else {
+  //         logger.info('Password reset successfully', result);
+  //         res.status(200).send({
+  //           success: true,
+  //           message: 'password changed successfully',
+  //           result: result
+  //         });
+  //       }
+  //     });
+  //   } catch (err) {
+  //     logger.error('Error while resetting the password', err);
+  //     return res.status(401).send({
+  //       success: false,
+  //       message: 'Token expired or invalid token'
+  //     });
+  //   }
+  // }
 }
 
 // exporting the class

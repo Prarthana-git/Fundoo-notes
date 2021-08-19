@@ -32,10 +32,10 @@ const userSchema = mongoose.Schema({
     required: true,
     minlength: 8
   }
-},
-{
-  timestamps: true
 });
+// {
+//   timestamps: true
+// });
 /**
  * @description     : It is converting password content to a encrypted to form using pre middleware
  *                    of mongoose and bcrypt npm package.
@@ -94,19 +94,14 @@ class UserModel {
     });
   }
 
-  forgotPassword (emailId, callback) {
+  forgotPass (emailId, callback) {
     try {
-      User.findOne({ email: emailId.email }, (error, data) => {
-        if (error) {
-          logger.error('Error while finding user', error);
-          return callback(error, null);
-        } else if (!data) {
-          logger.info('Invalid Credentials', data);
-          return callback(new Error('Invalid Credentials'), null);
-        } else {
-          return callback(null, data);
-        }
-      });
+      User.findOne({ email: emailId.email }, (err, data) =>
+        (err
+          ? callback(err, null)
+          : !data
+              ? callback(new Error('email not found'), null)
+              : callback(null, data)));
     } catch (error) {
       return callback(error, null);
     }
