@@ -35,10 +35,14 @@ const authLogin = Joi.object({
     .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
 
 });
-const authForgot = Joi.object({
+const forgotPasswordValidation = Joi.object({
   email: Joi.string()
     .pattern(new RegExp('^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$'))
     .required()
 });
-
-module.exports = { authRegister, authLogin, authForgot };
+const resetPasswordValidation = Joi.object({
+  password: Joi.string()
+    .required()
+    .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
+});
+module.exports = { authRegister, authLogin, forgotPasswordValidation, resetPasswordValidation };

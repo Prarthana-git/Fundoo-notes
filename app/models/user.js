@@ -106,6 +106,20 @@ class UserModel {
       return callback(error, null);
     }
   }
-}
+
+  updatePassword (inputData, callback) {
+    try {
+      const data = User.findOne({ email: inputData.email });
+      const hash = bcrypt.hashSync(inputData.password, 10, (error, hashPassword) => {
+        return error || hashPassword;
+      });
+      User.findOneAndUpdate({ email: data.email }, { password: hash }, (error, data) => {
+        return error ? callback(error, null) : callback(null, data);
+      });
+    } catch (error) {
+      return callback(error, null);
+    }
+  }
+};
 // exporting the class
 module.exports = new UserModel();

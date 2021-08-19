@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 
 /* eslint-disable no-sequences */
 const userModel = require('../models/user');
@@ -58,15 +57,32 @@ class UserService {
           callback(error, null);
         } else {
           newToken = help.forgotPasswordToken(data);
-          link = `${process.env.CLlENTURL}${newToken}`,
-          sendEmail(data.email, 'Password Reset Link ', link),
-          callback(null, link);
-          logger.info('Password reset link send successfully', data);
         }
+        link = `${process.env.CLlENTURL}${newToken}`;
+        sendEmail(data.email, 'Password Reset Link ', link);
+        callback(null, link);
+        logger.info('Password reset link send successfully', data);
       });
     } catch (error) {
       return callback(error, null);
     }
+  }
+
+  passwordReset (userInput, callback) {
+    const email = help.getEmailFromToken(userInput.token);
+    const inputData = {
+      email: email,
+      password: userInput.password
+    };
+
+    userModel.updatePassword(inputData, (error, data) => {
+      if (error) {
+        logger.error('Some error occured while updating password', error);
+        callback(error, null);
+      } else {
+        callback(null, data);
+      }
+    });
   }
 }
 module.exports = new UserService();
