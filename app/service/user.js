@@ -48,24 +48,19 @@ class UserService {
   }
 
   forgotPassword (email, callback) {
-    try {
-      let link;
-      let newToken;
-      userModel.forgotPass(email, (error, data) => {
-        if (error) {
-          logger.error('Some error occured', error);
-          callback(error, null);
-        } else {
-          newToken = help.forgotPasswordToken(data);
-        }
-        link = `${process.env.CLlENTURL}${newToken}`;
-        sendEmail(data.email, 'Password Reset Link ', link);
-        callback(null, link);
-        logger.info('Password reset link send successfully', data);
-      });
-    } catch (error) {
-      return callback(error, null);
-    }
+    userModel.forgotPass(email, (error, data) => {
+      if (data) {
+        logger.info('user email exist', data);
+        const userdetails = {
+          email: data.email,
+          _id: data._id
+        };
+        error ? callback(error, null) : callback(null, sendEmail(userdetails));
+      } else {
+        logger.error('user email not found', error);
+        callback(new Error('Email does not exist'));
+      }
+    });
   }
 
   passwordReset (userInput, callback) {
@@ -79,6 +74,7 @@ class UserService {
         logger.error('Some error occured while updating password', error);
         callback(error, null);
       } else {
+        logger.info('Password has been reset succesfully');
         callback(null, data);
       }
     });

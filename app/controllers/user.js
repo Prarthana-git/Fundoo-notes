@@ -111,7 +111,7 @@ class Controller {
       userService.forgotPassword(userData, (error, result) => {
         if (error) {
           logger.error('Error while trying to login the user', error);
-          return res.status(403).json({
+          return res.status(400).json({
             success: false,
             message: 'please check email and try again',
             error
@@ -146,9 +146,9 @@ class Controller {
       };
       userService.passwordReset(userData, (error, data) => {
         return ((error)
-          ? res.status(401).send({
+          ? res.status(400).send({
             sucess: false,
-            message: error
+            message: 'failed to reset password'
           })
           : res.status(200).send({
             success: true,
@@ -157,9 +157,9 @@ class Controller {
           }));
       });
     } catch (error) {
-      return res.status(500).send({
+      return res.status(401).send({
         sucess: false,
-        message: error.message
+        message: 'Token expired or invalid token'
       });
     }
   }

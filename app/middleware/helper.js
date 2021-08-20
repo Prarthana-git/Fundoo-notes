@@ -6,14 +6,7 @@ require('dotenv').config();
  */
 class Helper {
   generateToken (loginInput) {
-    const token = jwt.sign(loginInput, process.env.TOKEN_GENERATE, {
-      expiresIn: '3000s'
-    });
-    return token;
-  }
-
-  forgotPasswordToken (loginInput) {
-    const token = jwt.sign(loginInput.toJSON(), process.env.TOKEN_GENERATE, {
+    const token = jwt.sign({ loginInput }, process.env.TOKEN_GENERATE, {
       expiresIn: '3000s'
     });
     return token;

@@ -2,13 +2,13 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 const ejs = require('ejs');
 const logger = require('../config/loggers');
+const help = require('../app/middleware/helper');
 
-const sendEmail = async (emailId, subject, link) => {
+const sendEmail = (data) => {
   try {
+    const newToken = help.generateToken(data);
     const transporter = nodemailer.createTransport({
-      // host: 'gmail',
       service: 'gmail',
-      // port: 465,
       auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD
@@ -21,9 +21,9 @@ const sendEmail = async (emailId, subject, link) => {
       } else {
         const mailOptions = {
           from: process.env.EMAIL,
-          to: emailId,
-          subject,
-          html: `${result}<p>${link}</p>`
+          to: data.email,
+          subject: 'Password Reset Link',
+          html: `${result}<p>${process.env.CLlENTURL}${newToken}</p>`
         };
 
         transporter.sendMail(mailOptions, (info) => {

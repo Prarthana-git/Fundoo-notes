@@ -97,16 +97,17 @@ class UserModel {
   }
 
   forgotPass (emailId, callback) {
-    try {
-      User.findOne({ email: emailId.email }, (err, data) =>
-        (err
-          ? callback(err, null)
-          : !data
-              ? callback(new Error('email not found'), null)
-              : callback(null, data)));
-    } catch (error) {
-      return callback(error, null);
-    }
+    User.findOne({ email: emailId.email }, (error, data) => {
+      if (error) {
+        logger.error('Error while finding user', error);
+        return callback(error, null);
+      } else if (!data) {
+        logger.info('User does not exist', data);
+        return callback(new Error('User does not exist'), null);
+      } else {
+        return callback(null, data);
+      }
+    });
   }
 
   updatePassword (inputData, callback) {
