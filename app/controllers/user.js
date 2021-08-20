@@ -137,7 +137,12 @@ class Controller {
     try {
       const passwordValidation = resetPasswordValidation.validate(req.body);
       if (passwordValidation.error) {
-        res.status(400).send({ message: passwordValidation.error.details[0].message });
+        res.status(400).send({
+          success: false,
+          message: 'Please enter valid field',
+          data: passwordValidation
+        });
+        return;
       }
 
       const userData = {

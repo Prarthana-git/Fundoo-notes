@@ -114,7 +114,7 @@
               }
           }
       },
-      "/reset-passowrd": {
+      "/reset-password": {
           "put": {
               "tags": [
                   " resetPassword"
