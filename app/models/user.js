@@ -59,22 +59,24 @@ userSchema.pre('save', async function (next) {
 const User = mongoose.model('user', userSchema);
 
 class UserModel {
-  async registerUser (userDetails, callback) {
+  registerUser (userDetails, callback) {
     const newUser = new User({
       firstName: userDetails.firstName,
       lastName: userDetails.lastName,
       email: userDetails.email,
       password: userDetails.password
     });
-    const data = await User.findOne({ email: userDetails.email });
-    if (data) {
-      logger.error('User already exist', data);
-      return callback(new Error('User already exist'));
-    } else {
-      const result = await newUser.save();
-      callback(null, result);
-    }
+    newUser.save((err, data) => {
+      if (err) {
+        logger.error('Error while saving the new user', err);
+        callback(err, null);
+      } else {
+        logger.info('User saved successfully', data);
+        callback(null, data);
+      }
+    });
   }
+
   /**
    * @description     : It uses to login the registered user
    * @param           : loginData, callback

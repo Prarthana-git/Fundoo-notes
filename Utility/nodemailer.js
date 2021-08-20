@@ -6,9 +6,9 @@ const logger = require('../config/loggers');
 const sendEmail = async (emailId, subject, link) => {
   try {
     const transporter = nodemailer.createTransport({
-      host: 'smpt.gmail.com',
+      // host: 'gmail',
       service: 'gmail',
-      port: 465,
+      // port: 465,
       auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD

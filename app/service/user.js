@@ -74,7 +74,6 @@ class UserService {
       email: email,
       password: userInput.password
     };
-
     userModel.updatePassword(inputData, (error, data) => {
       if (error) {
         logger.error('Some error occured while updating password', error);
