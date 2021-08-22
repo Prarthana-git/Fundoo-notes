@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-undef */
+
 const chai = require('chai');
 const chaihttp = require('chai-http');
 const server = require('../server');
 const userDetails = require('./user.json');
-
+const expect = chai.expect;
+const token = '';
 // Assertion style
 chai.should();
 chai.use(chaihttp);
@@ -229,10 +232,11 @@ describe('forgot-password', () => {
 describe('reset-password', () => {
   it('givenValidPasswoordAndTokenItShould_makePUTRequestforResetPassword_andReturnStatusCodeAs200', (done) => {
     const userData = userDetails.user.userResetPassword;
-    const userToken = userDetails.user.userResetPasswordToken;
+    // const userToken = userDetails.user.userResetPasswordToken;
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklucHV0Ijp7ImVtYWlsIjoiY3ByYXJ0aGFuYTlAZ21haWwuY29tIiwiX2lkIjoiNjExZTVhZDZjNTJlNDQwZTA0MzdjZTBkIn0sImlhdCI6MTYyOTYwNjg5NSwiZXhwIjoxNjI5NjA5ODk1fQ.yyXHuleg6XC-9i3gKiG_i2ztZ-zMbt6ihB6HYUGFIFU';
     chai.request(server)
       .put('/reset-password')
-      .set('token', userToken)
+      .set('Token', token)
       .send(userData)
       .end((err, res) => {
         if (err) {
@@ -247,35 +251,38 @@ describe('reset-password', () => {
   });
   it('givenInValidTokenItShould_makePUTRequestforResetPassword_andNotResetPassword', (done) => {
     const userData = userDetails.user.userResetPassword;
-    const userToken = userDetails.user.userResetInvalidPasswordToken;
+    // const userToken = userDetails.user.userResetInvalidPasswordToken;
+    const token = '7ImVtYWlsIjoiY3ByYXJ0aGFuYTlAZ21haWwuY29tIiwiX2lkIjoiNjExZTVhZDZjNTJlNDQwZTA0Mzd';
     chai.request(server)
       .put('/reset-password')
-      .set('token', userToken)
+      .set('token', token)
       .send(userData)
-      .end((err, res) => {
-        if (err) {
-          return done(err);
+      .end((error, res) => {
+        if (error) {
+          expect(error).to.not.null;
         }
-        res.should.have.status(401);
-        res.body.should.be.a('object');
-        res.body.should.have.property('message').eql('Token expired or invalid token');
-        return done();
+        expect(error).to.be.null;
+        res.should.have.status(400);
+        res.body.should.have.property('success').eql(false);
+        res.body.should.have.property('message').eql('failed to reset password');
+        done();
       });
   });
   it('givenEmptyTokenItShould_makePUTRequestforResetPassword_andNotResentpassword', (done) => {
     const userData = userDetails.user.userResetInvalidPassword;
     chai.request(server)
       .put('/reset-password')
-      .set('headerParameter', '')
       .send(userData)
-      .end((err, res) => {
-        if (err) {
-          return done(err);
+      .set('Authorization', 'Bearer ' + token)
+      .end((error, res) => {
+        if (error) {
+          expect(error).to.not.null;
         }
-        res.should.have.status(401);
-        res.body.should.be.a('object');
-        res.body.should.have.property('message').eql('Token expired or invalid token');
-        return done();
+        expect(error).to.be.null;
+        res.should.have.status(400);
+        res.body.should.have.property('success').eql(false);
+        res.body.should.have.property('message').eql('Please enter valid field');
+        done();
       });
   });
 });

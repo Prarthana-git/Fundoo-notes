@@ -112,11 +112,10 @@ class UserModel {
 
   updatePassword (inputData, callback) {
     try {
-      const data = User.findOne({ email: inputData.email });
-      const hash = bcrypt.hashSync(inputData.password, 10, (error, hashPassword) => {
-        return error || hashPassword;
-      });
-      User.findOneAndUpdate({ email: data.email }, { password: hash }, (error, data) => {
+      const hash = bcrypt.hashSync(inputData.password, 10, (error, hashPassword) =>
+        error || hashPassword);
+
+      User.findOneAndUpdate({ email: inputData.email }, { password: hash }, (error, data) => {
         return error ? callback(error, null) : callback(null, data);
       });
     } catch (error) {

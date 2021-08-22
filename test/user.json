@@ -51,12 +51,10 @@
               "email": "sd@gmail.com"
             },
             "userResetPassword":{
-                "password": "HEyther54@@7Gh"
+                "password": "hdkh@542dcAAD"
             },
-            "userResetPasswordToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklucHV0Ijp7ImVtYWlsIjoiY3ByYXJ0aGFuYTlAZ21haWwuY29tIiwiX2lkIjoiNjExZTVhZDZjNTJlNDQwZTA0MzdjZTBkIn0sImlhdCI6MTYyOTQ4MjcyMywiZXhwIjoxNjI5NDg1NzIzfQ.wLRGN741uErC9XGE_P7jcITKgzcRfN4qax2FWAWucJU"
-            ,
             "userResetInvalidPassword":{
-                "password": "ytGh@5454D"
+                "password": "hdkh@542dcAAD"
             },
             "userResetInvalidPasswordToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
             }

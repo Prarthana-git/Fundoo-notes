@@ -14,7 +14,7 @@ class Helper {
 
   getEmailFromToken (token) {
     const decoded = jwt.verify(token, process.env.TOKEN_GENERATE);
-    return decoded.email;
+    return decoded.loginInput.email;
   }
 }
 module.exports = new Helper();

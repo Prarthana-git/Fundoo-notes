@@ -41,8 +41,10 @@ const forgotPasswordValidation = Joi.object({
     .required()
 });
 const resetPasswordValidation = Joi.object({
+  token: Joi.string().required(),
   password: Joi.string()
     .required()
     .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
+
 });
 module.exports = { authRegister, authLogin, forgotPasswordValidation, resetPasswordValidation };

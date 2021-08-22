@@ -135,36 +135,38 @@ class Controller {
 
   resetPassword (req, res) {
     try {
-      const passwordValidation = resetPasswordValidation.validate(req.body);
-      if (passwordValidation.error) {
-        res.status(400).send({
-          success: false,
-          message: 'Please enter valid field',
-          data: passwordValidation
-        });
-        return;
-      }
-
       const userData = {
         token: req.headers.token,
         password: req.body.password
       };
+      const resetValidation = resetPasswordValidation.validate(userData);
+      if (resetValidation.error) {
+        res.status(400).json({
+          success: false,
+          message: 'Please enter valid field',
+          data: resetValidation
+        });
+        return;
+      }
       userService.passwordReset(userData, (error, data) => {
-        return ((error)
-          ? res.status(400).send({
-            sucess: false,
-            message: 'failed to reset password'
-          })
-          : res.status(200).send({
+        if (error) {
+          return res.status(400).send({
+            success: false,
+            message: 'failed to reset password',
+            error
+          });
+        } else {
+          return res.status(200).send({
             success: true,
             message: 'Your password has been reset successfully!!',
             data: data
-          }));
+          });
+        }
       });
     } catch (error) {
-      return res.status(401).send({
-        sucess: false,
-        message: 'Token expired or invalid token'
+      return res.status(500).send({
+        success: false,
+        message: 'Internal server error'
       });
     }
   }
