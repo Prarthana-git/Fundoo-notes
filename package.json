@@ -4,9 +4,9 @@
   "description": "Take notes quickly.",
   "main": "Server.js",
   "scripts": {
-    "test": "mocha ",
+    "test": "mocha",
     "lint": "eslint",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [
     "Express",
@@ -47,6 +47,7 @@
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0"
+    "eslint-plugin-promise": "^5.1.0",
+    "supertest": "^6.1.6"
   }
 }

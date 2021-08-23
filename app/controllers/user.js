@@ -118,7 +118,7 @@ class Controller {
           });
         } else {
           logger.info('email found and sent link successfully', result);
-          return res.status(200).send({
+          return res.status(200).json({
             success: true,
             message: 'User email id exist and reset link sent successfully',
             data: result
@@ -126,7 +126,7 @@ class Controller {
         }
       });
     } catch (error) {
-      return res.status(500).send({
+      return res.status(500).json({
         success: false,
         message: 'Internal server error'
       });
@@ -150,13 +150,13 @@ class Controller {
       }
       userService.passwordReset(userData, (error, data) => {
         if (error) {
-          return res.status(400).send({
+          return res.status(400).json({
             success: false,
             message: 'failed to reset password',
             error
           });
         } else {
-          return res.status(200).send({
+          return res.status(200).json({
             success: true,
             message: 'Your password has been reset successfully!!',
             data: data
@@ -164,7 +164,7 @@ class Controller {
         }
       });
     } catch (error) {
-      return res.status(500).send({
+      return res.status(500).json({
         success: false,
         message: 'Internal server error'
       });

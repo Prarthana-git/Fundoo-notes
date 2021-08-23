@@ -7,7 +7,7 @@ require('dotenv').config();
 class Helper {
   generateToken (loginInput) {
     const token = jwt.sign({ loginInput }, process.env.TOKEN_GENERATE, {
-      expiresIn: '3000s'
+      expiresIn: '30000s'
     });
     return token;
   }

@@ -1,61 +1,63 @@
 {
-    "user":{
-            "register":{
-                "firstName":"Prarthana",
-                "lastName" :"Chaudhari",
-                "email"   :"prarthanachaudhari@gmail.com",
-                "password":"Prarthana@5554f"
-            },
-            "registerwithnofirstName":{
-                "lastName" :"Chaudhari",
-                "email"   :"chaudhari@gmail.com",
-                "password":"Priti@452g"
-            }, 
-            "registerwithnolastName":{
-                "firstName":"Priti",
-                "email"   :"pritichaudhari@gmail.com",
-                "password":"Priti@452g"
-            },
-            "registerwithnoemailId":{
-                "firstName":"Pranit",
-                "lastName" :"Patil",
-                "password":"Pranit!hs5"
-            },
-            "registrationWithNoPassword": {
-                "firstName": "Rohit",
-                "lastName": "Bagul",
-                "email": "rohitbagul.12@gmail.com"
-            },
-            "login": {
-                "email": "poojachaudhari@gmail.com",
-                "password": "pooja@44Gh"
-            },
-            "loginwithwrongEmail": {
-                "email": "pujachaudhari@gmail.com",
-                "password": "pooja@44Gh"
-            },
-            "loginwithnoEmail": {
-                "password": "pooja@44Gh"
-            },
-            "loginwithnoPassword": {
-                "email": "poojachaudhari@gmail.com"
-            },
-            "loginwrongPassword": {
-                "email": "poojachaudhari@gmail.com",
-                "password": "Pooja@44Gh"
-            },
-            "userforgetPassword":{
-                "email": "prarthanachaudhari@gmail.com"
-            },
-            "userforgetPasswordNotregistered":{
-              "email": "sd@gmail.com"
-            },
-            "userResetPassword":{
-                "password": "hdkh@542dcAAD"
-            },
-            "userResetInvalidPassword":{
-                "password": "hdkh@542dcAAD"
-            },
-            "userResetInvalidPasswordToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
-            }
+    "user": {
+        "register": {
+            "firstName": "Prarthana",
+            "lastName": "Chaudhari",
+            "email": "prarthanachaudhari@gmail.com",
+            "password": "Prarthana@5554f"
+        },
+        "registerwithnofirstName": {
+            "lastName": "Chaudhari",
+            "email": "chaudhari@gmail.com",
+            "password": "Priti@452g"
+        },
+        "registerwithnolastName": {
+            "firstName": "Priti",
+            "email": "pritichaudhari@gmail.com",
+            "password": "Priti@452g"
+        },
+        "registerwithnoemailId": {
+            "firstName": "Pranit",
+            "lastName": "Patil",
+            "password": "Pranit!hs5"
+        },
+        "registrationWithNoPassword": {
+            "firstName": "Rohit",
+            "lastName": "Bagul",
+            "email": "rohitbagul.12@gmail.com"
+        },
+        "login": {
+            "email": "poojachaudhari@gmail.com",
+            "password": "pooja@44Gh"
+        },
+        "loginwithwrongEmail": {
+            "email": "pujachaudhari@gmail.com",
+            "password": "pooja@44Gh"
+        },
+        "loginwithnoEmail": {
+            "password": "pooja@44Gh"
+        },
+        "loginwithnoPassword": {
+            "email": "poojachaudhari@gmail.com"
+        },
+        "loginwrongPassword": {
+            "email": "poojachaudhari@gmail.com",
+            "password": "Pooja@44Gh"
+        },
+        "userforgetPassword": {
+            "email": "cprarthana9@gmail.com"
+        },
+        "userforgetPasswordNotregistered": {
+            "email": "sd@gmail.com"
+        },
+        "userResetPassword":"hdk@542bcAAD",
+        "userResetData":{
+         "password":"hdk@42bcAAD",
+        "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklucHV0Ijp7ImVtYWlsIjoiY3ByYXJ0aGFuYTlAZ21haWwuY29tIiwiX2lkIjoiNjEyMzc0NDA3OTMxMDgyMDQ0NWZkZWYxIn0sImlhdCI6MTYyOTczMjE0MywiZXhwIjoxNjI5NzYyMTQzfQ.EQyp-KBVAhhw6d2Wo5j3b2HPxThQ2-dUw41vyg63rmI"
+        },
+        "userResetInvalidCoupon":{
+            "password":"hdk@542bcAAD",
+            "token" : "7ImVtYWlsIjoiY3ByYXJ0aGFuYTlAZ21haWwuY29tIiwiX2lkIjoiNjExZTVhZDZjNTJlNDQwZTA0Mzd"
+        }
     }
+}
