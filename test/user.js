@@ -234,7 +234,7 @@ describe('reset-password', () => {
     const userData = userDetails.user.userResetData;
     chai.request(server)
       .put('/reset-password')
-      .set('Authorization', userData.token)
+      .set({ Authorization: `Bearer ${userData.token}` })
       .send(userData)
       .end((err, res) => {
         if (err) {
@@ -252,8 +252,7 @@ describe('reset-password', () => {
     const userData = userDetails.user.userResetInvalidCoupon;
     chai.request(server)
       .put('/reset-password')
-      .set('Authorization', 'Bearer ', userData.token)
-      .set('content-type', 'application/json')
+      .set({ Authorization: `Bearer ${userData.token}` })
       .send(userData)
       .end((error, res) => {
         if (error) {
@@ -262,7 +261,7 @@ describe('reset-password', () => {
         expect(error).to.be.null;
         res.should.have.status(400);
         res.body.should.have.property('success').eql(false);
-        res.body.should.have.property('message').eql('Please enter valid field');
+        res.body.should.have.property('message').eql('Invalid Token');
         done();
       });
   });
@@ -271,7 +270,7 @@ describe('reset-password', () => {
     chai.request(server)
       .put('/reset-password')
       .send(userData)
-      .set('Authorization', 'Bearer ', userData.token)
+      .set({ Authorization: `Bearer ${userData.token}` })
       .end((error, res) => {
         if (error) {
           expect(error).to.not.null;

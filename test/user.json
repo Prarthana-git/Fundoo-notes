@@ -53,11 +53,11 @@
         "userResetPassword":"hdk@542bcAAD",
         "userResetData":{
          "password":"hdk@42bcAAD",
-        "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklucHV0Ijp7ImVtYWlsIjoiY3ByYXJ0aGFuYTlAZ21haWwuY29tIiwiX2lkIjoiNjEyMzc0NDA3OTMxMDgyMDQ0NWZkZWYxIn0sImlhdCI6MTYyOTczMjE0MywiZXhwIjoxNjI5NzYyMTQzfQ.EQyp-KBVAhhw6d2Wo5j3b2HPxThQ2-dUw41vyg63rmI"
+        "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklucHV0Ijp7ImVtYWlsIjoiY3ByYXJ0aGFuYTlAZ21haWwuY29tIiwiX2lkIjoiNjEyM2MwZDljMDMzY2UwZGU0ODE2N2U4In0sImlhdCI6MTYyOTc3NjgxOSwiZXhwIjoxNjI5ODA2ODE5fQ.yOfqDGqr2lSx9Fi_rVaU1gT51N_szm5VxvS6ujtQ8bQ"
         },
         "userResetInvalidCoupon":{
             "password":"hdk@542bcAAD",
-            "token" : "7ImVtYWlsIjoiY3ByYXJ0aGFuYTlAZ21haWwuY29tIiwiX2lkIjoiNjExZTVhZDZjNTJlNDQwZTA0Mzd"
+            "token" : "7ImVtYWlsIjoiY3B"
         }
     }
 }

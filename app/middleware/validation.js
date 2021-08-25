@@ -47,4 +47,21 @@ const resetPasswordValidation = Joi.object({
     .pattern(new RegExp('^(?=.*[@#$%^&+=])(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$'))
 
 });
-module.exports = { authRegister, authLogin, forgotPasswordValidation, resetPasswordValidation };
+const notesValidation = Joi.object({
+  title: Joi.string()
+    .required(),
+
+  description: Joi.string()
+    .required()
+}); const updateNoteValidation = Joi.object({
+  title: Joi.string()
+    .required(),
+
+  description: Joi.string()
+    .required(),
+
+  noteId: Joi.string()
+    .required()
+});
+
+module.exports = { authRegister, authLogin, forgotPasswordValidation, resetPasswordValidation, notesValidation, updateNoteValidation };

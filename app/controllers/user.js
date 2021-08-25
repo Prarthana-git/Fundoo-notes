@@ -136,7 +136,7 @@ class Controller {
   resetPassword (req, res) {
     try {
       const userData = {
-        token: req.headers.token,
+        token: req.body.token,
         password: req.body.password
       };
       const resetValidation = resetPasswordValidation.validate(userData);
@@ -164,9 +164,9 @@ class Controller {
         }
       });
     } catch (error) {
-      return res.status(500).json({
+      return res.status(400).json({
         success: false,
-        message: 'Internal server error'
+        message: 'Invalid Token'
       });
     }
   }
