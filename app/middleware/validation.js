@@ -53,15 +53,6 @@ const notesValidation = Joi.object({
 
   description: Joi.string()
     .required()
-}); const updateNoteValidation = Joi.object({
-  title: Joi.string()
-    .required(),
-
-  description: Joi.string()
-    .required(),
-
-  noteId: Joi.string()
-    .required()
 });
 
-module.exports = { authRegister, authLogin, forgotPasswordValidation, resetPasswordValidation, notesValidation, updateNoteValidation };
+module.exports = { authRegister, authLogin, forgotPasswordValidation, resetPasswordValidation, notesValidation };

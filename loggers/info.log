@@ -5331,3 +5331,39 @@
 {"level":"info","message":"user logged in successfully","timestamp":"2021-08-25T18:13:18.392Z"}
 {"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-25T18:23:59.936Z"}
 {"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-25T18:27:03.334Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T01:59:03.300Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T02:01:07.088Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-26T02:01:13.203Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-26T02:01:13.208Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T02:09:39.983Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T02:10:31.480Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"61261afaadcfe844dc8e5413","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"61261afaadcfe844dc8e5413","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$gs9ZlCxf.UU9FYeaLhTr8eXIt7tZfD4KdW6vDLmgTGN6siRzYctnS","__v":0},"$init":true,"level":"info","message":"user email exist","timestamp":"2021-08-26T02:12:19.878Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-26T02:12:19.915Z"}
+{"level":"info","message":"info","timestamp":"2021-08-26T02:12:24.912Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T02:18:59.323Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T02:45:35.749Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"61261afaadcfe844dc8e5413","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"61261afaadcfe844dc8e5413","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$gs9ZlCxf.UU9FYeaLhTr8eXIt7tZfD4KdW6vDLmgTGN6siRzYctnS","__v":0},"$init":true,"level":"info","message":"user email exist","timestamp":"2021-08-26T02:50:03.144Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-26T02:50:03.250Z"}
+{"level":"info","message":"info","timestamp":"2021-08-26T02:50:07.679Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"61261afaadcfe844dc8e5413","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"61261afaadcfe844dc8e5413","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$gs9ZlCxf.UU9FYeaLhTr8eXIt7tZfD4KdW6vDLmgTGN6siRzYctnS","__v":0},"$init":true,"level":"info","message":"user email exist","timestamp":"2021-08-26T03:06:31.278Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-26T03:06:31.289Z"}
+{"level":"info","message":"info","timestamp":"2021-08-26T03:06:34.733Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T03:09:13.082Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T03:10:36.349Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-26T03:17:14.861Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-26T03:17:14.867Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T03:24:32.895Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T10:27:37.466Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-26T10:27:50.185Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-26T10:27:50.189Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T10:31:47.665Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T10:43:30.595Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T10:44:36.680Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T10:46:30.373Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T10:47:28.469Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T10:51:34.723Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T11:11:51.094Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T11:35:33.231Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T11:44:23.727Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T11:53:52.420Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-26T12:10:53.970Z"}

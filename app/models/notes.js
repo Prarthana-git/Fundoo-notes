@@ -23,14 +23,38 @@ class ModelNotes {
     return note.save();
   }
 
-  updateNote (notesId, notesData) {
+  updateNote (noteId, notesData, callback) {
     try {
-      NoteModel.findByIdAndUpdate(notesId.notesId, {
+      NoteModel.findByIdAndUpdate(noteId, {
         title: notesData.title,
         description: notesData.description
-      }, { new: true });
+      }, { new: true }, (error, data) => {
+        return error ? callback(error, null) : callback(null, data);
+      });
     } catch (error) {
-      return error;
+      return callback(error, null);
+    }
+  }
+
+  getAllNotes (callback) {
+    NoteModel.find({}, (error, data) => {
+      return error ? callback(error, null) : callback(null, data);
+    });
+  }
+
+  getOneNote (noteId, callback) {
+    NoteModel.findById(noteId, (error, data) => {
+      return error ? callback(error, null) : callback(null, data);
+    });
+  }
+
+  deleteNotes (noteId, callback) {
+    try {
+      NoteModel.findByIdAndRemove(noteId, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
     }
   }
 }

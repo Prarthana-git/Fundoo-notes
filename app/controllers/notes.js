@@ -30,24 +30,17 @@ class NotesController {
 
   updateNote (req, res) {
     try {
-      const checkField = notesValidation.validate(req.body);
-      if (checkField.error) {
-        res.status(400).send({
-          success: false,
-          message: 'Field can not be empty'
-        });
-        const notesId = req.params;
-        const noteData = {
-          title: req.body.title,
-          description: req.body.description
-        };
-        const updatedNote = noteService.updateNote(notesId, noteData);
-        return res.status(200).send({
-          success: true,
-          message: 'Note updated successfully.!!',
-          data: updatedNote
-        });
+      const notesId = req.params.notesId;
+      const noteData = {
+        title: req.body.title,
+        description: req.body.description
       };
+      const updatedNote = noteService.updateNote(notesId, noteData);
+      return res.status(200).send({
+        success: true,
+        message: 'Note updated successfully.!!',
+        data: updatedNote
+      });
     } catch (err) {
       res.status(500).send({
         success: false,
@@ -55,6 +48,61 @@ class NotesController {
       });
     }
   }
-}
 
+  getAllNotes (req, res) {
+    noteService.getAllNotes((error, notesData) => {
+      if (error) {
+        return res.status(500).send({
+          success: false,
+          message: 'Some error occured'
+        });
+      }
+      res.status(200).send({
+        success: true,
+        message: 'Retrieved Notes',
+        data: notesData
+      });
+    });
+  }
+
+  getOne (req, res) {
+    const notesId = req.params.notesId;
+    noteService.getNoteById(notesId, (error, noteData) => {
+      if (error) {
+        return res.status(400).send({
+          success: false,
+          message: 'Note not found'
+        });
+      } else {
+        return res.status(200).send({
+          success: true,
+          message: 'Retrieved Note',
+          data: noteData
+        });
+      }
+    });
+  }
+
+  deleteNotes (req, res) {
+    try {
+      const notesId = req.params.notesId;
+      noteService.deleteNotes(notesId, (error, noteData) => {
+        if (error) {
+          return res.status(500).send({
+            success: false,
+            message: 'Note not deleted'
+          });
+        } else {
+          return res.status(200).send({
+            success: true,
+            message: 'Deleted Notes successfully',
+            data: noteData
+          });
+        }
+      });
+    } catch (error) {
+      return (error);
+    }
+  }
+}
 module.exports = new NotesController();
