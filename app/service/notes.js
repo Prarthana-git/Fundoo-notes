@@ -6,28 +6,14 @@ class Service {
   }
 
   updateNote (noteId, notesdata, callback) {
-    try {
-      notesModel.updateNote(noteId, notesdata, (error, data) => {
-        if (error) {
-          return callback(error, null);
-        } else {
-          return callback(null, data);
-        }
-      });
-    } catch (error) {
-      return callback(error, null);
-    }
+    notesModel.updateNote(noteId, notesdata, (error, data) => {
+      return error ? callback(error, null) : callback(null, data);
+    });
   }
 
   getAllNotes (callback) {
     notesModel.getAllNotes((error, data) => {
       return error ? callback(error, null) : callback(null, data);
-    });
-  }
-
-  getNoteById (noteId, callback) {
-    notesModel.getOneNote(noteId, (error, noteData) => {
-      return error ? callback(error, null) : callback(null, noteData);
     });
   }
 

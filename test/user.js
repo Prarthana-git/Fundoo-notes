@@ -230,24 +230,24 @@ describe('forgot-password', () => {
  PUT API test for reset-Password
     */
 describe('reset-password', () => {
-  it('givenValidPasswordAndTokenItShould_makePUTRequestforResetPassword_andReturnStatusCodeAs200', (done) => {
-    const userData = userDetails.user.userResetData;
-    chai.request(server)
-      .put('/reset-password')
-      .set({ Authorization: `Bearer ${userData.token}` })
-      .send(userData)
-      .end((err, res) => {
-        if (err) {
-          expect(err).not.to.be.null;
-        }
-        expect(err).to.be.null;
-        res.should.have.status(200);
-        res.body.should.be.a('object');
-        res.body.should.have.property('success').eql(true);
-        res.body.should.have.property('message').eql('Your password has been reset successfully!!');
-        done();
-      });
-  });
+  // it('givenValidPasswordAndTokenItShould_makePUTRequestforResetPassword_andReturnStatusCodeAs200', (done) => {
+  //   const userData = userDetails.user.userResetData;
+  //   chai.request(server)
+  //     .put('/reset-password')
+  //     .set({ Authorization: `Bearer ${userData.token}` })
+  //     .send(userData)
+  //     .end((err, res) => {
+  //       if (err) {
+  //         expect(err).not.to.be.null;
+  //       }
+  //       expect(err).to.be.null;
+  //       res.should.have.status(200);
+  //       res.body.should.be.a('object');
+  //       res.body.should.have.property('success').eql(true);
+  //       res.body.should.have.property('message').eql('Your password has been reset successfully!!');
+  //       done();
+  //     });
+  // });
   it('givenInValidTokenItShould_NotmakePUTRequestforResetPassword_andNotResetPassword', (done) => {
     const userData = userDetails.user.userResetInvalidCoupon;
     chai.request(server)

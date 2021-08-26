@@ -7,7 +7,9 @@ class NotesController {
       const infoValidation = notesValidation.validate(req.body);
       if (infoValidation.error) {
         return res.status(400).send({
-          message: infoValidation.error.details[0].message
+          success: false,
+          message: 'Enter Valid Details',
+          data: infoValidation
         });
       }
       const notesData = {
@@ -15,7 +17,7 @@ class NotesController {
         description: req.body.description
       };
       const notesCreate = noteService.createNotes(notesData);
-      res.send({
+      res.status(201).send({
         success: true,
         message: 'Notes Created!',
         data: notesCreate
@@ -30,6 +32,14 @@ class NotesController {
 
   updateNote (req, res) {
     try {
+      const infoValidation = notesValidation.validate(req.body);
+      if (infoValidation.error) {
+        return res.status(400).send({
+          success: false,
+          message: 'Enter Valid Details',
+          data: infoValidation
+        });
+      }
       const notesId = req.params.notesId;
       const noteData = {
         title: req.body.title,
@@ -62,24 +72,6 @@ class NotesController {
         message: 'Retrieved Notes',
         data: notesData
       });
-    });
-  }
-
-  getOne (req, res) {
-    const notesId = req.params.notesId;
-    noteService.getNoteById(notesId, (error, noteData) => {
-      if (error) {
-        return res.status(400).send({
-          success: false,
-          message: 'Note not found'
-        });
-      } else {
-        return res.status(200).send({
-          success: true,
-          message: 'Retrieved Note',
-          data: noteData
-        });
-      }
     });
   }
 

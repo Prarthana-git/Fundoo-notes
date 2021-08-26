@@ -24,26 +24,16 @@ class ModelNotes {
   }
 
   updateNote (noteId, notesData, callback) {
-    try {
-      NoteModel.findByIdAndUpdate(noteId, {
-        title: notesData.title,
-        description: notesData.description
-      }, { new: true }, (error, data) => {
-        return error ? callback(error, null) : callback(null, data);
-      });
-    } catch (error) {
-      return callback(error, null);
-    }
-  }
-
-  getAllNotes (callback) {
-    NoteModel.find({}, (error, data) => {
+    NoteModel.findByIdAndUpdate(noteId, {
+      title: notesData.title,
+      description: notesData.description
+    }, { new: true }, (error, data) => {
       return error ? callback(error, null) : callback(null, data);
     });
   }
 
-  getOneNote (noteId, callback) {
-    NoteModel.findById(noteId, (error, data) => {
+  getAllNotes (callback) {
+    NoteModel.find({}, (error, data) => {
       return error ? callback(error, null) : callback(null, data);
     });
   }

@@ -1,0 +1,32 @@
+{
+    "notesCreate": {
+        "title": "Test Notes",
+        "description": "testing notes app"
+    },
+    "InvalidNotesDescription": {
+        "title": "New Notes"
+    },
+    "InvalidNotesTitle":{
+        "Description":"Complete Task withthin time"
+    },
+    "notesPut": {
+        "title": "Test Notes",
+        "description": "testing notes app"
+    },
+
+    "notesPutNoTitle": {
+        "description": "this is my second notes"
+    },
+
+    "notesPutNoDescription": {
+        "title": "Test Notes"
+    },
+    
+    "notesDelPos": {
+        "isDeleted": true
+    },
+
+    "notesDelNeg": {
+        "isDeleted": ""
+    }
+}
