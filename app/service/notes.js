@@ -5,9 +5,13 @@ class Service {
     notesModel.create(data, callback);
   }
 
-  updateNote (noteId, notesdata, callback) {
-    notesModel.updateNote(noteId, notesdata, (error, data) => {
-      return error ? callback(error, null) : callback(null, data);
+  updateNote (notesdata, callback) {
+    notesModel.updateNote(notesdata, (error, data) => {
+      if (error) {
+        return callback(error, null);
+      } else {
+        return callback(null, data);
+      }
     });
   }
 

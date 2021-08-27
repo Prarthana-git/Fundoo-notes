@@ -40,12 +40,12 @@ class NotesController {
           data: infoValidation
         });
       }
-      const notesId = req.params.notesId;
       const noteData = {
         title: req.body.title,
-        description: req.body.description
+        description: req.body.description,
+        notesId: req.params.notesId
       };
-      const updatedNote = noteService.updateNote(notesId, noteData);
+      const updatedNote = noteService.updateNote(noteData);
       return res.status(200).send({
         success: true,
         message: 'Note updated successfully.!!',
@@ -60,19 +60,26 @@ class NotesController {
   }
 
   getAllNotes (req, res) {
-    noteService.getAllNotes((error, notesData) => {
-      if (error) {
-        return res.status(500).send({
-          success: false,
-          message: 'Some error occured'
+    try {
+      noteService.getAllNotes((error, notesData) => {
+        if (error) {
+          return res.status(400).send({
+            success: false,
+            message: 'Some error occured'
+          });
+        }
+        res.status(200).send({
+          success: true,
+          message: 'Retrieved Notes',
+          data: notesData
         });
-      }
-      res.status(200).send({
-        success: true,
-        message: 'Retrieved Notes',
-        data: notesData
       });
-    });
+    } catch (error) {
+      return res.send(500).send({
+        success: false,
+        message: error.message
+      });
+    }
   }
 
   deleteNotes (req, res) {
@@ -80,9 +87,9 @@ class NotesController {
       const notesId = req.params.notesId;
       noteService.deleteNotes(notesId, (error, noteData) => {
         if (error) {
-          return res.status(500).send({
+          return res.status(400).send({
             success: false,
-            message: 'Note not deleted'
+            message: 'Some error occure while Deleting the data'
           });
         } else {
           return res.status(200).send({
@@ -93,7 +100,10 @@ class NotesController {
         }
       });
     } catch (error) {
-      return (error);
+      return res.status(500).send({
+        success: false,
+        message: 'Internal Server Error'
+      });
     }
   }
 }

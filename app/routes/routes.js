@@ -12,7 +12,7 @@ module.exports = (app) => {
   // api for forgot-password
   app.post('/forgot-passowrd', userController.forgotPassword);
 
-  // api for forgot-password
+  // api for reset-password
   app.put('/reset-password', userController.resetPassword);
 
   // notes CRUD api

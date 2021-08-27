@@ -23,8 +23,8 @@ class ModelNotes {
     return note.save();
   }
 
-  updateNote (noteId, notesData, callback) {
-    NoteModel.findByIdAndUpdate(noteId, {
+  updateNote (notesData, callback) {
+    NoteModel.findByIdAndUpdate(notesData.noteId, {
       title: notesData.title,
       description: notesData.description
     }, { new: true }, (error, data) => {

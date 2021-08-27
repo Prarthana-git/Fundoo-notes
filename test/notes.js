@@ -179,7 +179,7 @@ describe('Notes API', () => {
      * Positive and Negative - Deleting a single contact using ID into database
      */
   describe('delete/:notesId', () => {
-    it('givenValidData_shouldDeleteInDB', (done) => {
+    it('givenValidData_shouldDeleteNoteFromDB', (done) => {
       chai.request(server)
         .delete('/deletenote/6127ba141580844794032e1f')
         .send(notesInput.notesDelPos)
@@ -192,6 +192,33 @@ describe('Notes API', () => {
           res.body.should.be.a('object');
           res.body.should.have.property('success').eql(true);
           res.body.should.have.property('message').eql('Deleted Notes successfully');
+          return done();
+        });
+    });
+    it('givenInvalidData_shouldNotDeleteInDB', (done) => {
+      chai.request(server)
+        .delete('/delete')
+        .send(notesInput.notesDelNeg)
+        .set('token', token)
+        .end((error, res) => {
+          if (error) {
+            return done(error);
+          }
+          res.should.have.status(404);
+          res.body.should.be.a('object');
+          return done();
+        });
+    });
+
+    it('givenDetailswithNoToken_shouldNotDeleteNotes', (done) => {
+      chai.request(server)
+        .get('/notes/notes')
+        .end((error, res) => {
+          if (error) {
+            return done(error);
+          }
+          res.should.have.status(404);
+          res.body.should.be.a('object');
           return done();
         });
     });

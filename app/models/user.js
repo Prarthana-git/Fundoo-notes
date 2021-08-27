@@ -117,7 +117,7 @@ class UserModel {
 
       User.findOneAndUpdate({ email: inputData.email }, { password: hash }, (error, data) => {
         return error ? callback(error, null) : callback(null, data);
-      });
+      }, { new: true });
     } catch (error) {
       return callback(error, null);
     }
