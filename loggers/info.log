@@ -7343,3 +7343,17 @@
 {"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T13:45:22.605Z"}
 {"level":"info","message":"logged in successfully","timestamp":"2021-08-27T13:45:42.969Z"}
 {"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T13:45:42.972Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T16:27:49.656Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T16:36:01.591Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T16:36:05.323Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T16:36:05.330Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T16:42:51.334Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T16:54:19.511Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T16:55:55.924Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T16:55:55.929Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T17:09:31.840Z"}
+{"level":"info","message":"Invalid Credentials","timestamp":"2021-08-27T17:10:19.794Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:10:19.795Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:10:19.796Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:10:39.658Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:10:39.665Z"}

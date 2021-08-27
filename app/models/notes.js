@@ -27,7 +27,7 @@ class ModelNotes {
     NoteModel.findByIdAndUpdate(notesData.noteId, {
       title: notesData.title,
       description: notesData.description
-    }, { new: true }, (error, data) => {
+    }, (error, data) => {
       return error ? callback(error, null) : callback(null, data);
     });
   }

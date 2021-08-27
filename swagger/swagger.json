@@ -129,7 +129,7 @@
                       }
                   },
                   {
-                      "name": "token",
+                      "name":"token",
                       "in": "header"
                   }
               ],
@@ -143,20 +143,146 @@
                   "500": {
                       "description": "Internal Error"
                   }
-              },
-              "security":[{
-                "JWT" :[]
-              }]
-          }
-      },
+              }
+            }
+        },
+      "/createnotes": {
+        "post": {
+            "tags": ["Notes"],
+            "description": "creating notes",
+            "parameters": [{
+                "name": "create notes",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "$ref": "#/definitions/Notes"
+                }
+            }],
+            "responses": {
+                "201": {
+                    "description": "Registered"
+                },
+                "400": {
+                    "description": "Bad Request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [{
+                "JWT": []
+            }]
+        }
+    },
+    "/getnotes": {
+        "get": {
+            "tags": ["Notes"],
+            "description": "get notes",
+            "parameters": [],
+            "responses": {
+                "200": {
+                    "description": "Successful"
+                },
+                "400": {
+                    "description": "Bad Request"
+                },
+                "401": {
+                    "description": "Unauthorized"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [{
+                "JWT": []
+            }]
+        }
+    },
+    "/note/{notesId}": {
+        "put": {
+            "tags": ["Notes"],
+            "description": "update note using ID",
+            "parameters": [{
+                    "name": "notesId",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                   "name": "new NotesDetails",
+                    "in": "body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/Notes"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Successful"
+                },
+                "400": {
+                    "description": "Bad Request"
+                },
+                "401": {
+                    "description": "Unauthorized"
+                },
+                "404": {
+                    "description": "Not Found"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [{
+                "JWT": []
+            }]
+        }
+    },
+    "/deletenote/{:notesId}": {
+        "delete": {
+          "tags": [
+            "Notes"
+          ],
+          "description": "delete user data by id from system",
+          "parameters": [
+            {
+              "name": ":notesId",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"    
+            },
+            "400": {
+              "description": "Bad Request"
+            },
+            "404": {
+              "description": "Not found"
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          },
+          "security":[{
+            "JWT" :[]
+          }]
+        }
+    }
+},
       "securityDefinitions": {
           "JWT": {
               "type": "apiKey",
               "name": "token",
               "in": "Headers"
           }
-      }
-    },
+      },
       "definitions": {
           "User": {
               "type": "object",
@@ -201,7 +327,16 @@
                       "type": "string"
                   }
               }
-
-          }
+          },     "Notes": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        }
       }
   }

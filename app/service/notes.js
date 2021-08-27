@@ -7,11 +7,7 @@ class Service {
 
   updateNote (notesdata, callback) {
     notesModel.updateNote(notesdata, (error, data) => {
-      if (error) {
-        return callback(error, null);
-      } else {
-        return callback(null, data);
-      }
+      return error ? callback(error, null) : callback(null, data);
     });
   }
 
