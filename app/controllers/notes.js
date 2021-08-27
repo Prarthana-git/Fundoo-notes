@@ -40,12 +40,12 @@ class NotesController {
           data: infoValidation
         });
       }
+      const notesId = req.params.notesId;
       const noteData = {
         title: req.body.title,
-        description: req.body.description,
-        notesId: req.params.notesId
+        description: req.body.description
       };
-      const updatedNote = noteService.updateNote(noteData);
+      const updatedNote = noteService.updateNote(notesId, noteData);
       return res.status(200).send({
         success: true,
         message: 'Note updated successfully.!!',

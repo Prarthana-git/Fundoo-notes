@@ -129,6 +129,22 @@ describe('Notes API', () => {
       * Updating a single contact using ID into database
       */
   describe('PUT /note/:notesId', () => {
+    it('givencreateNoteDetails_shouldMakePUTRequestToCreateNote', (done) => {
+      chai.request(server)
+        .put('/note/6128421ecf28ee0d582c567d')
+        .send(notesInput.notesPut)
+        .set('token', token)
+        .end((error, res) => {
+          if (error) {
+            return done(error);
+          }
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          res.body.should.have.property('success').eql(true);
+          res.body.should.have.property('message').eql('Note updated successfully.!!');
+          return done();
+        });
+    });
     it('givenUpdateNoteDetailswithInvalidTitle_shouldReturnFailsToMakePutRequestToCreateNote', (done) => {
       chai.request(server)
         .put('/note/6127ba141580844794032e1f')

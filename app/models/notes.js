@@ -23,13 +23,15 @@ class ModelNotes {
     return note.save();
   }
 
-  updateNote (notesData, callback) {
-    NoteModel.findByIdAndUpdate(notesData.noteId, {
-      title: notesData.title,
-      description: notesData.description
-    }, (error, data) => {
-      return error ? callback(error, null) : callback(null, data);
-    });
+  async updateNote (notesId, notesData) {
+    try {
+      return await NoteModel.findByIdAndUpdate(notesId, {
+        title: notesData.title,
+        description: notesData.description
+      }, { new: true });
+    } catch (error) {
+      return error;
+    }
   }
 
   getAllNotes (callback) {

@@ -5,10 +5,18 @@ class Service {
     notesModel.create(data, callback);
   }
 
-  updateNote (notesdata, callback) {
-    notesModel.updateNote(notesdata, (error, data) => {
-      return error ? callback(error, null) : callback(null, data);
-    });
+  /**
+      * @description this function is written to trigger or call the models function
+      * @param {*} notesId
+      * @param {*} notesData
+      * @returns error if it has error else data
+      */
+  async updateNote (notesId, notesData) {
+    try {
+      return await notesModel.updateNote(notesId, notesData);
+    } catch (error) {
+      return error;
+    }
   }
 
   getAllNotes (callback) {

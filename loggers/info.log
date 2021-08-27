@@ -7357,3 +7357,286 @@
 {"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:10:19.796Z"}
 {"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:10:39.658Z"}
 {"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:10:39.665Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T17:25:23.342Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:25:50.640Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:25:50.645Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T17:30:56.459Z"}
+{"level":"info","message":"Invalid Credentials","timestamp":"2021-08-27T17:34:18.172Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:34:18.174Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:34:18.176Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:34:36.129Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:34:36.133Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T17:38:27.447Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:27.662Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:27.666Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:27.858Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:27.859Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:28.023Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:28.024Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:28.176Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:28.177Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:28.331Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:28.332Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:28.492Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:28.493Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:28.649Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:28.649Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:30.788Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:30.789Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:30.935Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:30.935Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:31.081Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:31.081Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:31.229Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:31.230Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:31.375Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:31.375Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:31.518Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:31.519Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:31.667Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:31.668Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:31.817Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:31.818Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:31.962Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:31.963Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:32.119Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:32.120Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:32.272Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:32.272Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:32.400Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:32.401Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:32.541Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:32.541Z"}
+{"level":"info","message":"Invalid Credentials","timestamp":"2021-08-27T17:38:32.553Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:38:32.554Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:38:32.554Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:32.695Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:32.695Z"}
+{"message":"Error while trying to login the user","level":"error","timestamp":"2021-08-27T17:38:32.704Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:32.842Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:32.842Z"}
+{"message":"Error while trying to login the user","level":"error","timestamp":"2021-08-27T17:38:32.850Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:32.985Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:32.986Z"}
+{"level":"error","message":"Please enter correct password","timestamp":"2021-08-27T17:38:33.115Z"}
+{"level":"error","message":"Error while trying to login the user Password does not match","stack":"Error: Password does not match\n    at D:\\Mern\\Fundoo-Notes\\app\\service\\user.js:40:22","timestamp":"2021-08-27T17:38:33.115Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:33.265Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:33.266Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"61261afaadcfe844dc8e5413","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"61261afaadcfe844dc8e5413","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$gs9ZlCxf.UU9FYeaLhTr8eXIt7tZfD4KdW6vDLmgTGN6siRzYctnS","__v":0},"$init":true,"level":"info","message":"user email exist","timestamp":"2021-08-27T17:38:33.279Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-27T17:38:33.304Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:33.452Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:33.452Z"}
+{"level":"info","message":"User does not exist","timestamp":"2021-08-27T17:38:33.467Z"}
+{"level":"error","message":"user email not found User does not exist","stack":"Error: User does not exist\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:106:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:38:33.468Z"}
+{"level":"error","message":"Error while trying to login the user Email does not exist","stack":"Error: Email does not exist\n    at D:\\Mern\\Fundoo-Notes\\app\\service\\user.js:61:18\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:106:16\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:38:33.469Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:33.609Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:33.609Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:38:33.754Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:38:33.754Z"}
+{"level":"info","message":"info","timestamp":"2021-08-27T17:38:39.215Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T17:46:55.724Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:46:55.929Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:46:55.933Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:46:56.131Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:46:56.131Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:46:56.286Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:46:56.287Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:46:56.436Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:46:56.437Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:46:56.605Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:46:56.606Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:46:56.773Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:46:56.774Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:46:56.916Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:46:56.917Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:46:59.061Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:46:59.061Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:01.206Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:01.207Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:01.352Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:01.352Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:01.508Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:01.509Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:01.659Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:01.660Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:01.808Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:01.808Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:01.954Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:01.955Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:02.115Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:02.115Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:02.264Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:02.265Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:02.415Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:02.416Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:02.568Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:02.568Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:02.725Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:02.725Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:02.851Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:02.852Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:02.987Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:02.987Z"}
+{"level":"info","message":"Invalid Credentials","timestamp":"2021-08-27T17:47:02.997Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:47:02.998Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:47:02.999Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:03.136Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:03.137Z"}
+{"message":"Error while trying to login the user","level":"error","timestamp":"2021-08-27T17:47:03.146Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:03.279Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:03.280Z"}
+{"message":"Error while trying to login the user","level":"error","timestamp":"2021-08-27T17:47:03.288Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:03.427Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:03.428Z"}
+{"level":"error","message":"Please enter correct password","timestamp":"2021-08-27T17:47:03.553Z"}
+{"level":"error","message":"Error while trying to login the user Password does not match","stack":"Error: Password does not match\n    at D:\\Mern\\Fundoo-Notes\\app\\service\\user.js:40:22","timestamp":"2021-08-27T17:47:03.554Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:03.700Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:03.700Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"61261afaadcfe844dc8e5413","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"61261afaadcfe844dc8e5413","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$gs9ZlCxf.UU9FYeaLhTr8eXIt7tZfD4KdW6vDLmgTGN6siRzYctnS","__v":0},"$init":true,"level":"info","message":"user email exist","timestamp":"2021-08-27T17:47:03.713Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-27T17:47:03.738Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:03.877Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:03.878Z"}
+{"level":"info","message":"User does not exist","timestamp":"2021-08-27T17:47:03.888Z"}
+{"level":"error","message":"user email not found User does not exist","stack":"Error: User does not exist\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:106:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:47:03.889Z"}
+{"level":"error","message":"Error while trying to login the user Email does not exist","stack":"Error: Email does not exist\n    at D:\\Mern\\Fundoo-Notes\\app\\service\\user.js:61:18\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:106:16\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:47:03.889Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:04.028Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:04.029Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:47:04.179Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:47:04.180Z"}
+{"level":"info","message":"info","timestamp":"2021-08-27T17:47:18.463Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T17:49:45.919Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:46.119Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:46.123Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:46.320Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:46.321Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:46.478Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:46.479Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:46.642Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:46.642Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:46.795Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:46.795Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:46.956Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:46.956Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:47.113Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:47.114Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:49.276Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:49.277Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:49.469Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:49.470Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:49.617Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:49.618Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:49.762Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:49.763Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:49.909Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:49.910Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:50.054Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:50.054Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:50.206Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:50.207Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:50.352Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:50.352Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:50.502Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:50.502Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:50.645Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:50.646Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:50.798Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:50.799Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:50.925Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:50.925Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:51.060Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:51.061Z"}
+{"level":"info","message":"Invalid Credentials","timestamp":"2021-08-27T17:49:51.073Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:49:51.074Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:49:51.074Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:51.210Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:51.210Z"}
+{"message":"Error while trying to login the user","level":"error","timestamp":"2021-08-27T17:49:51.220Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:51.360Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:51.360Z"}
+{"message":"Error while trying to login the user","level":"error","timestamp":"2021-08-27T17:49:51.369Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:51.514Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:51.515Z"}
+{"level":"error","message":"Please enter correct password","timestamp":"2021-08-27T17:49:51.646Z"}
+{"level":"error","message":"Error while trying to login the user Password does not match","stack":"Error: Password does not match\n    at D:\\Mern\\Fundoo-Notes\\app\\service\\user.js:40:22","timestamp":"2021-08-27T17:49:51.647Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:51.787Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:51.788Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"61261afaadcfe844dc8e5413","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"61261afaadcfe844dc8e5413","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$gs9ZlCxf.UU9FYeaLhTr8eXIt7tZfD4KdW6vDLmgTGN6siRzYctnS","__v":0},"$init":true,"level":"info","message":"user email exist","timestamp":"2021-08-27T17:49:51.801Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-27T17:49:51.824Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:51.999Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:52.000Z"}
+{"level":"info","message":"User does not exist","timestamp":"2021-08-27T17:49:52.015Z"}
+{"level":"error","message":"user email not found User does not exist","stack":"Error: User does not exist\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:106:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:49:52.015Z"}
+{"level":"error","message":"Error while trying to login the user Email does not exist","stack":"Error: Email does not exist\n    at D:\\Mern\\Fundoo-Notes\\app\\service\\user.js:61:18\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:106:16\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:49:52.016Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:52.160Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:52.160Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:49:52.311Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:49:52.312Z"}
+{"level":"info","message":"info","timestamp":"2021-08-27T17:49:56.031Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-27T17:51:23.528Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:23.726Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:23.730Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:23.921Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:23.922Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:24.085Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:24.085Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:24.252Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:24.253Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:24.426Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:24.427Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:24.621Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:24.622Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:24.771Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:24.772Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:24.945Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:24.946Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:25.107Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:25.107Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:25.265Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:25.266Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:25.405Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:25.405Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:25.550Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:25.551Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:25.692Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:25.692Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:25.842Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:25.842Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:25.986Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:25.986Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:26.129Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:26.129Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:26.274Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:26.274Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:26.428Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:26.428Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:26.556Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:26.556Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:26.691Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:26.691Z"}
+{"level":"info","message":"Invalid Credentials","timestamp":"2021-08-27T17:51:26.702Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:51:26.703Z"}
+{"level":"error","message":"Error while trying to login the user Invalid Credentials","stack":"Error: Invalid Credentials\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:92:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:51:26.704Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:26.843Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:26.843Z"}
+{"message":"Error while trying to login the user","level":"error","timestamp":"2021-08-27T17:51:26.851Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:26.987Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:26.987Z"}
+{"message":"Error while trying to login the user","level":"error","timestamp":"2021-08-27T17:51:26.997Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:27.136Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:27.136Z"}
+{"level":"error","message":"Please enter correct password","timestamp":"2021-08-27T17:51:27.262Z"}
+{"level":"error","message":"Error while trying to login the user Password does not match","stack":"Error: Password does not match\n    at D:\\Mern\\Fundoo-Notes\\app\\service\\user.js:40:22","timestamp":"2021-08-27T17:51:27.263Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:27.405Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:27.406Z"}
+{"$__":{"strictMode":true,"selected":{},"getters":{},"_id":"61261afaadcfe844dc8e5413","wasPopulated":false,"activePaths":{"paths":{"password":"init","email":"init","lastName":"init","firstName":"init","_id":"init","__v":"init"},"states":{"ignore":{},"default":{},"init":{"_id":true,"firstName":true,"lastName":true,"email":true,"password":true,"__v":true},"modify":{},"require":{}},"stateNames":["require","modify","init","default","ignore"]},"pathsToScopes":{},"cachedRequired":{},"session":null,"$setCalled":{},"emitter":{"_events":{},"_eventsCount":0,"_maxListeners":0},"$options":{"skipId":true,"isNew":false,"willInit":true,"defaults":true}},"isNew":false,"$locals":{},"$op":null,"_doc":{"_id":"61261afaadcfe844dc8e5413","firstName":"Prarthana","lastName":"Chaudhari","email":"cprarthana9@gmail.com","password":"$2b$10$gs9ZlCxf.UU9FYeaLhTr8eXIt7tZfD4KdW6vDLmgTGN6siRzYctnS","__v":0},"$init":true,"level":"info","message":"user email exist","timestamp":"2021-08-27T17:51:27.417Z"}
+{"level":"info","message":"email found and sent link successfully","timestamp":"2021-08-27T17:51:27.442Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:27.589Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:27.589Z"}
+{"level":"info","message":"User does not exist","timestamp":"2021-08-27T17:51:27.603Z"}
+{"level":"error","message":"user email not found User does not exist","stack":"Error: User does not exist\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:106:25\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:51:27.603Z"}
+{"level":"error","message":"Error while trying to login the user Email does not exist","stack":"Error: Email does not exist\n    at D:\\Mern\\Fundoo-Notes\\app\\service\\user.js:61:18\n    at D:\\Mern\\Fundoo-Notes\\app\\models\\user.js:106:16\n    at D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\model.js:5074:18\n    at processTicksAndRejections (internal/process/task_queues.js:77:11)","timestamp":"2021-08-27T17:51:27.604Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:27.739Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:27.739Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-27T17:51:27.884Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-27T17:51:27.885Z"}
+{"level":"info","message":"info","timestamp":"2021-08-27T17:51:31.799Z"}
