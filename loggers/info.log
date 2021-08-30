@@ -7779,3 +7779,17 @@
 {"level":"info","message":"logged in successfully","timestamp":"2021-08-28T03:25:33.607Z"}
 {"level":"info","message":"user logged in successfully","timestamp":"2021-08-28T03:25:33.608Z"}
 {"level":"info","message":"info","timestamp":"2021-08-28T03:25:37.326Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-30T10:07:39.327Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-30T10:09:01.609Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-30T10:09:01.615Z"}
+{"level":"error","message":"Error while finding user Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:197:23)\n    at listOnTimeout (internal/timers.js:557:17)\n    at processTimers (internal/timers.js:500:7)","timestamp":"2021-08-30T10:18:12.072Z"}
+{"level":"error","message":"Error while trying to login the user Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:197:23)\n    at listOnTimeout (internal/timers.js:557:17)\n    at processTimers (internal/timers.js:500:7)","timestamp":"2021-08-30T10:18:12.097Z"}
+{"level":"error","message":"Error while trying to login the user Operation `users.findOne()` buffering timed out after 10000ms","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (D:\\Mern\\Fundoo-Notes\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:197:23)\n    at listOnTimeout (internal/timers.js:557:17)\n    at processTimers (internal/timers.js:500:7)","timestamp":"2021-08-30T10:18:12.103Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-30T10:18:54.915Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-30T10:30:05.991Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-30T10:43:53.816Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-30T10:47:22.958Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-30T10:47:22.962Z"}
+{"message":"Successfully connected to the database","level":"info","timestamp":"2021-08-30T10:51:11.070Z"}
+{"level":"info","message":"logged in successfully","timestamp":"2021-08-30T10:52:22.995Z"}
+{"level":"info","message":"user logged in successfully","timestamp":"2021-08-30T10:52:22.999Z"}

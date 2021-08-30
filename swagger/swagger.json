@@ -198,6 +198,38 @@
             }]
         }
     },
+    "/note/{noteId}": {
+        "get": {
+            "tags": ["Notes"],
+            "description": "get notes by ID",
+            "parameters": [{
+                "name": "noteId",
+                "in": "path",
+                "required": true,
+                "type": "string"
+            }],
+            "responses": {
+                "200": {
+                    "description": "Successful"
+                },
+                "400": {
+                    "description": "Bad Request"
+                },
+                "401": {
+                    "description": "Unauthorized"
+                },
+                "404": {
+                    "description": "Not Found"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [{
+                "JWT": []
+            }]
+        }
+    },
     "/note/{notesId}": {
         "put": {
             "tags": ["Notes"],
