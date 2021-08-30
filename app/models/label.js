@@ -34,6 +34,26 @@ class LabelsModel {
     });
   }
 
+  async updateLabel (labelId, labelData) {
+    try {
+      return await LabelModel.findByIdAndUpdate(labelId, {
+        labelName: labelData.labelName
+      }, { new: true });
+    } catch (error) {
+      return error;
+    }
+  }
+
+  deleteLabel (labelId, callback) {
+    try {
+      LabelModel.findByIdAndRemove(labelId, (err, data) => {
+        return err ? callback(err, null) : callback(null, data);
+      });
+    } catch (err) {
+      callback(err, null);
+    }
+  }
+
   labelById (labelId, callback) {
     LabelModel.findById(labelId, (error, data) => {
       return error ? callback(error, null) : callback(null, data);

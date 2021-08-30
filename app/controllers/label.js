@@ -71,6 +71,59 @@ class LabelController {
       }
     });
   }
+
+  updateLabel (req, res) {
+    try {
+      const infoValidation = labelValidation.validate(req.body);
+      if (infoValidation.error) {
+        return res.status(400).send({
+          success: false,
+          message: 'Enter Valid Details',
+          data: infoValidation
+        });
+      }
+      const labelId = req.params.labelId;
+      const labelData = {
+        labelName: req.body.labelName
+      };
+      const updateLabel = labelService.updateLabel(labelId, labelData);
+      return res.status(200).send({
+        success: true,
+        message: 'label updated successfully.!!',
+        data: updateLabel
+      });
+    } catch (err) {
+      res.status(500).send({
+        success: false,
+        message: 'Internal server error'
+      });
+    }
+  }
+
+  deleteLabel (req, res) {
+    try {
+      const labelId = req.params.labelId;
+      labelService.deleteLabel(labelId, (error, labelData) => {
+        if (error) {
+          return res.status(400).send({
+            success: false,
+            message: 'Some error occure while Deleting the data'
+          });
+        } else {
+          return res.status(200).send({
+            success: true,
+            message: 'Deleted Label successfully',
+            data: labelData
+          });
+        }
+      });
+    } catch (error) {
+      return res.status(500).send({
+        success: false,
+        message: 'Internal Server Error'
+      });
+    }
+  }
 }
 
 module.exports = new LabelController();

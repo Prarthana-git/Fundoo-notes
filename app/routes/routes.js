@@ -24,7 +24,9 @@ module.exports = (app) => {
   app.delete('/deletenote/:notesId', helper.verifyToken, noteController.deleteNotes);
 
   // labels CRUD api
-  app.post('/createLabel/:userId', helper.verifyToken, labelController.createLabel);
+  app.post('/createLabel/:notesId', helper.verifyToken, labelController.createLabel);
   app.get('/AllLabels', helper.verifyToken, labelController.getAllLabels);
   app.get('/label/:labelId', helper.verifyToken, labelController.getOne);
+  app.put('/updateLabel/:labelId', helper.verifyToken, labelController.updateLabel);
+  app.delete('/deletelabel/:labelId', helper.verifyToken, labelController.deleteLabel);
 };

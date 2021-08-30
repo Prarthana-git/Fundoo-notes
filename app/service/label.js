@@ -14,6 +14,14 @@ class LabelService {
     }
   }
 
+  async updateLabel (labelId, labelData) {
+    try {
+      return await labelModel.updateLabel(labelId, labelData);
+    } catch (error) {
+      return error;
+    }
+  }
+
   getAllLabels (callback) {
     labelModel.getAllLabels((error, data) => {
       return error ? callback(error, null) : callback(null, data);
@@ -24,6 +32,20 @@ class LabelService {
     labelModel.labelById(labelId, (error, Data) => {
       return error ? callback(error, null) : callback(null, Data);
     });
+  }
+
+  deleteLabel (labelId, callback) {
+    try {
+      labelModel.deleteLabel(labelId, (error, data) => {
+        if (!labelId) {
+          return callback(error, null);
+        } else {
+          return callback(null, data);
+        }
+      });
+    } catch (error) {
+      return callback(error, null);
+    }
   }
 }
 
