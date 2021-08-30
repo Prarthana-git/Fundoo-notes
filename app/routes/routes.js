@@ -3,6 +3,7 @@ module.exports = (app) => {
   const helper = require('../middleware/helper');
   const noteController = require('../controllers/notes');
   const userController = require('../controllers/user');
+  const labelController = require('../controllers/label');
   // api for register user
   app.post('/register', userController.register);
 
@@ -21,4 +22,7 @@ module.exports = (app) => {
   app.get('/getnotes', helper.verifyToken, noteController.getAllNotes);
   app.get('/note/:noteId', helper.verifyToken, noteController.getOne);
   app.delete('/deletenote/:notesId', helper.verifyToken, noteController.deleteNotes);
+
+  // labels CRUD api
+  app.post('/createLabel/:notesId', helper.verifyToken, labelController.createLabel);
 };
