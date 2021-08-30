@@ -13,6 +13,18 @@ class LabelService {
       return error;
     }
   }
+
+  getAllLabels (callback) {
+    labelModel.getAllLabels((error, data) => {
+      return error ? callback(error, null) : callback(null, data);
+    });
+  }
+
+  labelById (labelId, callback) {
+    labelModel.labelById(labelId, (error, Data) => {
+      return error ? callback(error, null) : callback(null, Data);
+    });
+  }
 }
 
 module.exports = new LabelService();

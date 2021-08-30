@@ -22,10 +22,22 @@ class LabelsModel {
         labelName: labelData.labelName,
         notesId: labelData.notesId
       });
-      return await label.save();
+      return await label.save({});
     } catch (error) {
       return error;
     }
+  }
+
+  getAllLabels (callback) {
+    LabelModel.find({}, (error, data) => {
+      return error ? callback(error, null) : callback(null, data);
+    });
+  }
+
+  labelById (labelId, callback) {
+    LabelModel.findById(labelId, (error, data) => {
+      return error ? callback(error, null) : callback(null, data);
+    });
   }
 }
 module.exports = new LabelsModel();
