@@ -82,6 +82,24 @@ class NotesController {
     }
   }
 
+  getOne (req, res) {
+    const noteId = req.params.noteId;
+    noteService.notesById(noteId, (error, Data) => {
+      if (error) {
+        return res.status(400).send({
+          success: false,
+          message: 'Note not found'
+        });
+      } else {
+        return res.status(200).send({
+          success: true,
+          message: 'Retrieved Note details',
+          data: Data
+        });
+      }
+    });
+  }
+
   deleteNotes (req, res) {
     try {
       const notesId = req.params.notesId;

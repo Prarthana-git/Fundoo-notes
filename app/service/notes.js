@@ -19,6 +19,12 @@ class Service {
     }
   }
 
+  notesById (noteId, callback) {
+    notesModel.notesById(noteId, (error, Data) => {
+      return error ? callback(error, null) : callback(null, Data);
+    });
+  }
+
   getAllNotes (callback) {
     notesModel.getAllNotes((error, data) => {
       return error ? callback(error, null) : callback(null, data);

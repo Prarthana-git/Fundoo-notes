@@ -34,6 +34,12 @@ class ModelNotes {
     }
   }
 
+  notesById (noteId, callback) {
+    NoteModel.findById(noteId, (error, data) => {
+      return error ? callback(error, null) : callback(null, data);
+    });
+  }
+
   getAllNotes (callback) {
     NoteModel.find({}, (error, data) => {
       return error ? callback(error, null) : callback(null, data);
