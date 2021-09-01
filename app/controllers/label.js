@@ -42,7 +42,7 @@ class LabelController {
         }
         res.status(200).send({
           success: true,
-          message: 'Retrieved Notes',
+          message: 'Retrieved Labels',
           data: labelData
         });
       });
@@ -65,7 +65,7 @@ class LabelController {
       } else {
         return res.status(200).send({
           success: true,
-          message: 'Retrieved Note details',
+          message: 'Retrieved Label details',
           data: Data
         });
       }

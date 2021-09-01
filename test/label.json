@@ -1,0 +1,21 @@
+{
+    "labelCreate": {
+        "labelName": "New Testing Label"
+    },
+
+    "labelCreateWithNoNotesId": {
+        "labelName": "New Testing Label with no NotesId"
+    },
+
+    "EmptylabelCreate": {
+        "labelName": ""
+    },
+
+    "lablePut": {
+        "labelName": "New Testing Label For Update"
+    },
+
+    "labelsDelNeg": {
+        "labelName": "New Testing Label For Update"
+    }
+} 
