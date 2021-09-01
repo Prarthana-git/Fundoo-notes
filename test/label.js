@@ -211,17 +211,4 @@ describe('delete/:labelId', () => {
         return done();
       });
   });
-
-  it('givenLabelId_HasNoLabelId_shouldNotAbleToDeletTheLabel', (done) => {
-    chai.request(server)
-      .delete('/deleteLabel')
-      .set('token', token)
-      .end((error, res) => {
-        if (error) {
-          return done(error);
-        }
-        res.should.have.status(404);
-        return done();
-      });
-  });
 });
